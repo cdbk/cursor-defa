@@ -1,13 +1,14 @@
-# Cursor Development Rules Collection
+# Cursor DEF-A Development Framework
 
 ## 概要
 
-Cursor用の開発支援ルールファイル集です。フロントエンド、バックエンド、全般開発に対応したルールを含み、AI協働開発の効率化と品質向上を目的としています。
+Cursor用のDEF-Aプロセスモデルを適用した開発支援フレームワークです。フロントエンド、バックエンド、全般開発に対応したルールを含み、AI協働開発の効率化と品質向上を目的としています。
 
 **開発手法**: このプロジェクトは[Cursor](https://cursor.sh/)によるVibe Coding（AI協働開発）で作成されています。AIとの対話を通じて、効率的かつ高品質なコード開発を実現しています。
 
 ## 特徴
 
+- **DEF-Aプロセスモデル**: Define-Explore-Formulate-Act/Assessの構造化された思考プロセス
 - **全般開発ルール**: コード品質・パフォーマンス・セキュリティ・アクセシビリティ等を網羅
 - **TDD/BDD統合**: テスト駆動開発・ビヘイビア駆動開発の適用判断フレームワーク
 - **ログ機能**: プロファイル適用状況の可視化と継続的改善
@@ -19,7 +20,7 @@ Cursor用の開発支援ルールファイル集です。フロントエンド�
 
 ```
 rules/
-├── general_development_rules.cursorrules    # 全般開発ルール
+├── defa_development_framework.cursorrules   # DEF-A Development Framework
 ├── LICENSE                                  # MIT License
 └── README.md                               # このファイル
 ```
@@ -31,6 +32,12 @@ rules/
 3. AI支援機能が自動的に適用されます
 
 ### 主要機能
+
+#### DEF-Aプロセスモデル
+- **Define（定義）**: 問題の明確化と対象の定義
+- **Explore（探求）**: 多角的な分析と可能性の探索
+- **Formulate（統合）**: 解決策の統合と最適化
+- **Act/Assess（実践・評価）**: 実装と継続的改善
 
 #### TDD/BDD統合開発
 - **TDD（テスト駆動開発）**: Red-Green-Refactorサイクルによる品質保証
@@ -59,8 +66,17 @@ Vibe Codingは、AIとの自然な対話を通じてコードを開発する手�
 
 ```bash
 # プロジェクトルートにルールファイルをコピー
-cp rules/general_development_rules.cursorrules .cursorrules
+cp rules/defa_development_framework.cursorrules .cursorrules
 ```
+
+### DEF-Aプロセスモデルの活用
+
+このフレームワークは、DEF-Aプロセスモデルに基づいて設計されています：
+
+1. **Define**: 開発課題の明確化と要件定義
+2. **Explore**: 技術選択とアプローチの探索
+3. **Formulate**: 最適な解決策の統合
+4. **Act/Assess**: 実装と継続的改善
 
 ### 使用例
 

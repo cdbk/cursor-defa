@@ -1,4 +1,4 @@
-# Contributing to Cursor Development Rules Collection
+# Contributing to Cursor DEF-A Development Framework
 
 Thank you for your interest in contributing to this project! This document provides guidelines for contributing.
 
@@ -79,4 +79,4 @@ If you have questions about contributing:
 - Contact the maintainer directly
 - Check existing issues and discussions
 
-Thank you for contributing to the Cursor Development Rules Collection! 
+Thank you for contributing to the Cursor DEF-A Development Framework! 
