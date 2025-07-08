@@ -20,11 +20,14 @@ Cursor用のDEF-Aプロセスモデルを適用した開発支援フレームワ
 ## ファイル構成
 
 ```
-rules/
-├── defa_development_framework.cursorrules          # DEF-A Development Framework（完全版）
-├── defa_development_framework_compact.cursorrules  # DEF-A Development Framework（コンパクト版）
+├── rules/
+│   ├── defa_development_framework.cursorrules          # DEF-A Development Framework（完全版）
+│   └── defa_development_framework_compact.cursorrules  # DEF-A Development Framework（コンパクト版）
 ├── LICENSE                                         # MIT License
-└── README.md                                      # このファイル
+├── README.md                                      # このファイル
+├── CONTRIBUTING.md                                # 貢献ガイドライン
+├── SECURITY.md                                    # セキュリティポリシー
+└── CODE_OF_CONDUCT.md                             # 行動規範
 ```
 
 ## 使用方法
@@ -130,7 +133,7 @@ cp rules/defa_development_framework_compact.cursorrules .cursorrules
 - 基本特性を保持しつつ実用性を向上
 - README.mdにバージョン選択ガイドを追加
 
-### v1.0.0 (2024-12-19)
+### v1.0.0 (2025-07-08)
 - 初回リリース
 - DEF-A Development Framework完全版を提供
 - TDD/BDD統合開発フレームワークを実装
@@ -165,8 +168,6 @@ GitHub: [https://github.com/cdbk](https://github.com/cdbk)
 
 このプロジェクトのセキュリティに関する情報は [SECURITY.md](SECURITY.md) を参照してください。
 
-セキュリティ上の問題を発見された場合は、[security@cdbk.tokyo](mailto:security@cdbk.tokyo) までご連絡ください。
+セキュリティ上の問題を発見された場合は、[kentarok@cdbk.tokyo](mailto:kentarok@cdbk.tokyo) までご連絡ください。
 
-## ライセンス
-
-このプロジェクトはMIT Licenseの下で公開されています。詳細は [LICENSE](LICENSE) ファイルを参照してください。 
+ 
