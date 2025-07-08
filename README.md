@@ -120,6 +120,12 @@ GitHub: [https://github.com/cdbk](https://github.com/cdbk)
 4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
 5. プルリクエストを作成
 
+## セキュリティ
+
+このプロジェクトのセキュリティに関する情報は [SECURITY.md](SECURITY.md) を参照してください。
+
+セキュリティ上の問題を発見された場合は、[security@cdbk.tokyo](mailto:security@cdbk.tokyo) までご連絡ください。
+
 ## ライセンス
 
 このプロジェクトはMIT Licenseの下で公開されています。詳細は [LICENSE](LICENSE) ファイルを参照してください。 

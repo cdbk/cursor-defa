@@ -57,6 +57,19 @@ jspm_packages/
 .env
 .env.test
 .env.production
+.env.local
+.env.development
+.env.staging
+
+# Security files
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+config/secrets.json
+config/private.json
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
