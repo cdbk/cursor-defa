@@ -128,13 +128,7 @@ GitHub: [https://github.com/cdbk](https://github.com/cdbk)
 
 ## 貢献
 
-プルリクエストやイシューの報告を歓迎します。
-
-1. このリポジトリをフォーク
-2. 機能ブランチを作成 (`git checkout -b feature/amazing-feature`)
-3. 変更をコミット (`git commit -m 'Add some amazing feature'`)
-4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
-5. プルリクエストを作成
+プルリクエストやイシューの報告を歓迎します。詳細は [CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
 
 ## セキュリティ
 
