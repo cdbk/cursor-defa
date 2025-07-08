@@ -46,6 +46,6 @@ When using this project:
 
 ## Contact
 
-- **Security issues**: [security@cdbk.tokyo](mailto:security@cdbk.tokyo)
-- **General questions**: [GitHub Issues](https://github.com/cdbk/cursor_user_rules/issues)
+- **Security issues**: [kentarok@cdbk.tokyo](mailto:kentarok@cdbk.tokyo)
+- **General questions**: [GitHub Issues](https://github.com/cdbk/cursor-defa/issues)
 - **Author**: Kentaro Kitagawa ([@cdbk](https://github.com/cdbk)) 
