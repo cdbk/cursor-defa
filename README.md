@@ -15,14 +15,16 @@ Cursor用のDEF-Aプロセスモデルを適用した開発支援フレームワ
 - **段階的適用**: プロジェクト規模や緊急度に応じた使い分け
 - **技術スタック対応**: フロントエンド（TypeScript、Nuxt.js、Next.js）・バックエンド（Node.js、Python、データベース）対応
 - **AI協働開発**: Vibe Codingによる効率的な開発プロセスと品質保証
+- **バージョン選択**: 完全版とコンパクト版の用途に応じた選択が可能
 
 ## ファイル構成
 
 ```
 rules/
-├── defa_development_framework.cursorrules   # DEF-A Development Framework
-├── LICENSE                                  # MIT License
-└── README.md                               # このファイル
+├── defa_development_framework.cursorrules          # DEF-A Development Framework（完全版）
+├── defa_development_framework_compact.cursorrules  # DEF-A Development Framework（コンパクト版）
+├── LICENSE                                         # MIT License
+└── README.md                                      # このファイル
 ```
 
 ## 使用方法
@@ -65,9 +67,25 @@ Vibe Codingは、AIとの自然な対話を通じてコードを開発する手�
 ### 設定例
 
 ```bash
-# プロジェクトルートにルールファイルをコピー
+# 完全版を使用する場合
 cp rules/defa_development_framework.cursorrules .cursorrules
+
+# コンパクト版を使用する場合（推奨）
+cp rules/defa_development_framework_compact.cursorrules .cursorrules
 ```
+
+### バージョン選択ガイド
+
+#### 完全版（defa_development_framework.cursorrules）
+- **用途**: 詳細な理論的背景と実装例が必要な場合
+- **特徴**: 546行の包括的なルールセット
+- **対象**: プロジェクト設計や長期的な技術戦略の検討時
+
+#### コンパクト版（defa_development_framework_compact.cursorrules）
+- **用途**: 日常的な開発作業での使用
+- **特徴**: 291行の実用的なルールセット（47%削減）
+- **対象**: 通常の開発作業、バグ修正、新機能実装時
+- **推奨**: 処理効率と実用性を重視する場合
 
 ### DEF-Aプロセスモデルの活用
 
@@ -103,6 +121,19 @@ cp rules/defa_development_framework.cursorrules .cursorrules
 
 [設計内容]
 ```
+
+## 更新履歴
+
+### v2.0.0 (2025-07-09)
+- コンパクト版ルールファイル（`defa_development_framework_compact.cursorrules`）を追加
+- ファイルサイズを47%削減（546行 → 291行）
+- 基本特性を保持しつつ実用性を向上
+- README.mdにバージョン選択ガイドを追加
+
+### v1.0.0 (2024-12-19)
+- 初回リリース
+- DEF-A Development Framework完全版を提供
+- TDD/BDD統合開発フレームワークを実装
 
 ## ライセンス
 
