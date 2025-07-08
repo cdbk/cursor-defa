@@ -26,7 +26,7 @@ If you discover a security vulnerability within this project, please send an ema
 ## Security Considerations
 
 ### This project contains:
-- Cursor development rules and guidelines
+- Cursor DEF-A development framework and guidelines
 - No sensitive data, API keys, or credentials
 - No executable code that could pose security risks
 - Configuration files for AI-assisted development
