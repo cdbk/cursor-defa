@@ -2,77 +2,45 @@
 
 ## 🎯 概要
 
-DEF-AモデルをCursorルールに統合し、効率的なAI協働を実現する最適化版ルールセットです。
-
-### ⚠️ 重要: 複雑性について
-このルールセットは**包括的で高度な機能**を提供しますが、**初心者には複雑すぎる可能性**があります。
-
-**推奨使用シーン**:
-- ✅ **中級者以上**: 開発経験があり、体系的なアプローチを求める方
-- ✅ **チーム開発**: 統一された品質基準とプロセスが必要な場合
-- ✅ **大規模プロジェクト**: 包括的な開発ガイドラインが必要な場合
-
-**注意が必要なシーン**:
-- ⚠️ **初心者**: まずは基本的なCursorの使い方に慣れることを推奨
-- ⚠️ **個人開発**: シンプルな開発には機能が過剰かもしれません
-- ⚠️ **緊急対応**: 複雑な分類よりも迅速な解決が必要な場合
-
-### このプロジェクトで解決できること
-- **開発効率の向上**: 質問内容に応じた最適なAI応答
-- **品質の一貫性**: 統一された品質基準とベストプラクティス
-- **学習効果の最大化**: 段階的なスキル向上支援
-- **チーム協働の強化**: 知識共有・メンタリング機能
-
-### 主な特徴
-- **DEF-A部分適用戦略**: 質問内容に応じた適切な思考フロー選択
-- **認知負荷管理**: 緊急度・複雑性に応じた応答最適化
-- **知的生産性最大化**: 効率性と品質の最適バランス
-- **継続的改善**: 使用状況に応じた段階的適用拡大
+シンプル版とDEF-A統合版の2つのバージョンを提供するCursorルールセットです。DEF-Aモデルを統合し、効率的なAI協働を実現します。
 
 ### 🚀 段階的導入の推奨
-1. **基本セット**: 基本ルールのみ（`core_rules.cursorrules`）
-2. **拡張セット**: + 技術領域別ルール（フロントエンド/バックエンド）
-3. **完全セット**: + 統合機能（エラー処理・チーム協働）
+1. **シンプル版**: `rules/simple/` フォルダ内のルールセット
+2. **基本セット**: 基本ルールのみ（`core_rules.cursorrules`）
+3. **拡張セット**: + 技術領域別ルール（フロントエンド/バックエンド/テスト）
+4. **DEF-A統合版**: `rules/defa/` フォルダ内の完全なルールセット（チーム開発向け）
 
 ## 🚀 クイックスタート
 
-### 段階的セットアップ（推奨）
-
-#### 基本セットアップ（シンプルな開発向け）
+### 自動セットアップ（推奨）
 ```bash
-# リポジトリクローン
+# リポジトリをクローン
 git clone [repository-url]
 cd cursor_user_rules
 
-# 基本ルールのみ配置
-cp rules/core_rules.cursorrules ~/.cursor/rules/
+# セットアップスクリプトを実行
+./setup-cursor-rules.sh
 ```
 
-```json
-// .cursorrules
-@core_rules.cursorrules
-```
+### 手動セットアップ
 
-#### 技術領域別セットアップ（専門的な開発向け）
+#### シンプル版セットアップ
 ```bash
-# 技術領域別ルールも追加
-cp rules/frontend_rules.cursorrules ~/.cursor/rules/
-cp rules/backend_rules.cursorrules ~/.cursor/rules/
-cp rules/rule_selector.cursorrules ~/.cursor/rules/
+# シンプル版ルールを配置
+cp rules/simple/core_rules.cursorrules ~/.cursor/rules/
+cp rules/simple/rule_selector.cursorrules ~/.cursor/rules/
 ```
 
 ```json
 // .cursorrules
 @core_rules.cursorrules
 @rule_selector.cursorrules
-@frontend_rules.cursorrules
-@backend_rules.cursorrules
 ```
 
-#### 完全セットアップ（チーム開発・大規模プロジェクト向け）
+#### DEF-A統合版セットアップ（チーム開発向け）
 ```bash
-# 全ルールファイル配置
-cp rules/*.cursorrules ~/.cursor/rules/
+# DEF-A統合版ルールファイル配置
+cp rules/defa/*.cursorrules ~/.cursor/rules/
 ```
 
 ```json
@@ -88,11 +56,43 @@ cp rules/*.cursorrules ~/.cursor/rules/
 @team_collaboration_rules.cursorrules
 ```
 
-### 使用例
+## 📁 ファイル構成
 
-#### シンプル使用例（基本開発向け）
+### シンプル版
+**`rules/simple/`** フォルダ内のルールセット
+- **`core_rules.cursorrules`** (71行) - 基本品質基準・シンプル版
+- **`rule_selector.cursorrules`** (246行) - 質問分析・ルール選択（シンプル版）
+- **`frontend_rules.cursorrules`** (82行) - フロントエンド開発専用ルール
+- **`backend_rules.cursorrules`** (98行) - バックエンド開発専用ルール
+- **`testing_rules.cursorrules`** (191行) - テスト・品質保証専用ルール
+
+**特徴**: DEF-Aモデル適用前の直感的で分かりやすい構成
+
+### DEF-A統合版（上級者・チーム向け）
+**`rules/defa/`** フォルダ内のルールセット
+
+#### コアファイル（必須）
+- **`core_rules.cursorrules`** (156行) - 基本品質基準・DEF-A統合フレームワーク
+- **`rule_selector.cursorrules`** (190行) - 質問分析・ルール選択システム
+
+#### 詳細ファイル（必要時参照）
+- **`defa_framework.cursorrules`** (185行) - DEF-Aモデル詳細・段階別ガイドライン
+- **`prompt_templates.cursorrules`** (145行) - プロンプトテンプレート・基本構造
+
+#### 技術領域別ファイル
+- **`frontend_rules.cursorrules`** (82行) - フロントエンド開発専用ルール
+- **`backend_rules.cursorrules`** (98行) - バックエンド開発専用ルール
+- **`testing_rules.cursorrules`** (191行) - テスト・品質保証専用ルール
+
+#### 統合機能ファイル（新規追加）
+- **`error_handling_rules.cursorrules`** (335行) - エラー処理統合・多層防御戦略
+- **`team_collaboration_rules.cursorrules`** (372行) - チーム協働・知識共有・学習促進
+
+## 💡 使用例
+
+### シンプル版使用例
 ```markdown
-# Cursor プロンプト - 基本指示
+# Cursor プロンプト - シンプル指示
 
 ## [REQUEST] 具体的要求
 TypeScriptで型安全なAPIクライアントを実装したい
@@ -102,7 +102,7 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **出力形式**: 実装コード + 簡単な説明
 ```
 
-#### 標準使用例（一般的な開発向け）
+### DEF-A統合版使用例（チーム開発向け）
 ```markdown
 # Cursor プロンプト - DEF-A統合指示
 
@@ -126,56 +126,19 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **出力形式**: 実装コード + 使用例
 ```
 
-#### 完全使用例（チーム開発・大規模プロジェクト向け）
-```markdown
-# Cursor プロンプト - DEF-A統合指示
+## ⚠️ 重要: 複雑性について
 
-## [CONTEXT] 開発状況
-- **プロジェクト**: 中規模Webアプリケーション
-- **開発段階**: 機能実装
-- **緊急度**: 通常
-- **チーム規模**: 小規模
-- **プロジェクト特性**: エンタープライズ（安定性・スケーラビリティ重視）
+このルールセットは**包括的で高度な機能**を提供しますが、**初心者には複雑すぎる可能性**があります。
 
-## [REQUEST] 具体的要求
-TypeScriptで型安全なAPIクライアントを実装したい
+**推奨使用シーン**:
+- ✅ **初心者・個人開発**: シンプル版から開始
+- ✅ **中級者以上**: 開発経験があり、体系的なアプローチを求める方
+- ✅ **チーム開発**: 統一された品質基準とプロセスが必要な場合
+- ✅ **大規模プロジェクト**: 包括的な開発ガイドラインが必要な場合
 
-## [DEF-A] 思考フロー指定
-- **適用段階**: Formulate → Act → Assess
-- **適用戦略**: 部分適用（実装重視）
-- **認知スタイル**: Systems思考重視（型安全性・構造化）
-- **複雑性レベル**: 標準
-
-## [RULES] 適用ルール
-- **主要ルール**: frontend_rules.cursorrules
-- **補助ルール**: error_handling_rules.cursorrules
-- **品質基準**: 三方よし + セキュリティ重視
-- **出力形式**: 実装コード + 使用例 + エラーハンドリング
-- **部分適用理由**: 効率性（実装に焦点）
-```
-
-## 📁 ファイル構成
-
-### コアファイル（必須）
-- **`core_rules.cursorrules`** (130行) - 基本品質基準・DEF-A統合フレームワーク
-- **`rule_selector.cursorrules`** (180行) - 質問分析・ルール選択システム
-
-### 詳細ファイル（必要時参照）
-- **`defa_framework.cursorrules`** (185行) - DEF-Aモデル詳細・段階別ガイドライン
-- **`prompt_templates.cursorrules`** (145行) - プロンプトテンプレート・基本構造
-
-### 技術領域別ファイル
-- **`frontend_rules.cursorrules`** - フロントエンド開発専用ルール
-- **`backend_rules.cursorrules`** - バックエンド開発専用ルール
-- **`testing_rules.cursorrules`** - テスト・品質保証専用ルール
-
-### 統合機能ファイル（新規追加）
-- **`error_handling_rules.cursorrules`** - エラー処理統合・多層防御戦略
-- **`team_collaboration_rules.cursorrules`** - チーム協働・知識共有・学習促進
-
-### 詳細例・参考資料
-- **`examples/prompt_examples.md`** - 詳細プロンプト例集
-- **`examples/rule_selector_examples.md`** - ルール選択詳細例集
+**注意が必要なシーン**:
+- ⚠️ **緊急対応**: 複雑な分類よりも迅速な解決が必要な場合
+- ⚠️ **学習初期**: まずは基本的なCursorの使い方に慣れることを推奨
 
 ## 🔄 DEF-A部分適用戦略
 
@@ -302,6 +265,10 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **丁度いい**: 過不足のない最適解
 - **持続可能性**: 長期的な保守・拡張性
 
+### 詳細例・参考資料
+- **`examples/prompt_examples.md`** - 詳細プロンプト例集
+- **`examples/rule_selector_examples.md`** - ルール選択詳細例集
+
 ## 🤝 貢献
 
 ### 開発ガイドライン
@@ -330,8 +297,8 @@ MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
 
 ---
 
-**Version**: 2.1.0 (DEF-A統合最適化版)  
-**Last Updated**: 2025年1月  
+**Version**: 0.6.0 (DEF-A統合機能強化版)  
+**Last Updated**: 2025年7月  
 **Author**: Kentaro Kitagawa
 
  
