@@ -1,30 +1,43 @@
 #!/bin/bash
 
-# Cursor Rules Setup Script
-# 公開ルールファイルをローカル環境にセットアップ
+# Cursor Rules Setup Script - DEF-A統合最適化版
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
 
-echo "🚀 Cursor Rules Setup Script"
-echo "================================"
+echo "🚀 Cursor Rules Setup - DEF-A統合最適化版"
+echo "=========================================="
 
-# .cursorディレクトリの作成
-mkdir -p .cursor/rules
+# ルールディレクトリの作成
+CURSOR_RULES_DIR="$HOME/.cursor/rules"
+if [ ! -d "$CURSOR_RULES_DIR" ]; then
+    echo "📁 Creating Cursor rules directory: $CURSOR_RULES_DIR"
+    mkdir -p "$CURSOR_RULES_DIR"
+else
+    echo "✅ Cursor rules directory already exists: $CURSOR_RULES_DIR"
+fi
 
 # ルールファイルのコピー
-echo "📁 Copying rule files..."
-cp rules/core_rules.cursorrules .cursor/rules/
-cp rules/rule_selector.cursorrules .cursor/rules/
-cp rules/frontend_rules.cursorrules .cursor/rules/
-cp rules/backend_rules.cursorrules .cursor/rules/
-cp rules/testing_rules.cursorrules .cursor/rules/
+echo "📋 Copying rule files..."
 
-echo "✅ Setup completed!"
-echo "📝 Available rules:"
-ls -la .cursor/rules/
+# コアファイル（コンパクト版）
+cp rules/core_rules.cursorrules "$CURSOR_RULES_DIR/"
+cp rules/rule_selector.cursorrules "$CURSOR_RULES_DIR/"
+
+# 詳細ファイル（必要時参照）
+cp rules/defa_framework.cursorrules "$CURSOR_RULES_DIR/"
+cp rules/prompt_templates.cursorrules "$CURSOR_RULES_DIR/"
+
+# 技術領域別ファイル
+cp rules/frontend_rules.cursorrules "$CURSOR_RULES_DIR/"
+cp rules/backend_rules.cursorrules "$CURSOR_RULES_DIR/"
+cp rules/testing_rules.cursorrules "$CURSOR_RULES_DIR/"
+
+echo "✅ All rule files copied successfully!"
+
+# ファイル一覧の表示
+echo "📁 Installed rule files:"
+ls -la "$CURSOR_RULES_DIR"/*.cursorrules
 
 echo ""
-echo "💡 Usage:"
-echo "   - Copy specific rules to .cursorrules for your project"
-echo "   - Or use rule_selector.cursorrules for dynamic selection"
-echo ""
-echo "🔄 To update rules:"
-echo "   - Run this script again after pulling latest changes" 
+echo "🎯 Setup completed! Please restart Cursor to apply the new rules."
+echo "📚 For usage instructions, see README.md and DEF-A_INTEGRATION_GUIDE.md" 
