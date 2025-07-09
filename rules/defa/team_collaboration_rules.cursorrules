@@ -1,0 +1,372 @@
+# Cursor Rules - Team Collaboration Integration (DEF-A統合版)
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
+
+## [DEFINE] チーム協働統合戦略
+
+### チーム開発特性の分類
+```yaml
+team_characteristics:
+  small_team:
+    definition: "2-5人の小規模チーム"
+    defa_strategy: "柔軟な段階適用・直接コミュニケーション重視"
+    collaboration_focus: "知識共有・相互学習"
+    
+  medium_team:
+    definition: "6-15人の中規模チーム"
+    defa_strategy: "標準化されたプロセス・役割分担明確化"
+    collaboration_focus: "プロセス最適化・品質保証"
+    
+  large_team:
+    definition: "16人以上の大規模チーム"
+    defa_strategy: "完全DEF-A適用・包括的品質管理"
+    collaboration_focus: "スケーラビリティ・継続的改善"
+    
+  distributed_team:
+    definition: "地理的に分散したチーム"
+    defa_strategy: "非同期協働・文書化重視"
+    collaboration_focus: "コミュニケーション効率・知識管理"
+```
+
+### チーム協働のDEF-A段階別アプローチ
+```yaml
+team_defa_flow:
+  define_stage:
+    focus: "チーム目標・役割の明確化・共有理解の構築"
+    activities:
+      - プロジェクト目標・要件の共有理解
+      - チームメンバーの役割・責任の明確化
+      - 技術スタック・開発環境の統一
+      - コミュニケーション・協働ルールの確立
+    
+  explore_stage:
+    focus: "多様な視点からの問題分析・解決策検討"
+    activities:
+      - チームメンバー全員の意見・アイデア収集
+      - 技術的・業務的制約の分析
+      - 複数の解決アプローチの検討
+      - リスク・影響範囲の評価
+    
+  formulate_stage:
+    focus: "チーム合意形成・統合戦略の策定"
+    activities:
+      - 最適解決策のチーム合意形成
+      - 実装計画・スケジュールの策定
+      - 品質基準・評価指標の統一
+      - 協働プロセスの設計
+    
+  act_stage:
+    focus: "協調的実装・並行作業の効率化"
+    activities:
+      - 役割分担に基づく並行実装
+      - 定期的な進捗共有・調整
+      - 相互レビュー・フィードバック
+      - 問題解決・意思決定の迅速化
+    
+  assess_stage:
+    focus: "チーム成果の評価・学習効果の測定"
+    activities:
+      - チーム成果・品質の評価
+      - 協働プロセスの効果測定
+      - 個人・チーム学習の評価
+      - 改善点の特定・次回への反映
+```
+
+## [EXPLORE] チーム協働の多様性活用
+
+### 認知スタイル別チーム協働
+```yaml
+cognitive_collaboration:
+  systems_thinking_team:
+    characteristics:
+      - 論理的・構造的思考
+      - システム全体の最適化重視
+      - 効率性・スケーラビリティ追求
+    defa_application:
+      - Define: システム要件・アーキテクチャ設計
+      - Explore: 技術的制約・依存関係分析
+      - Formulate: 統合システム設計・最適化戦略
+      - Act: 構造化実装・自動化推進
+      - Assess: システム性能・効率性測定
+    
+  empathy_thinking_team:
+    characteristics:
+      - ユーザー中心思考
+      - 体験・感情への配慮
+      - 共感・理解重視
+    defa_application:
+      - Define: ユーザーニーズ・体験要件定義
+      - Explore: ユーザー行動・感情分析
+      - Formulate: ユーザー体験設計・改善戦略
+      - Act: ユーザビリティ重視実装・テスト
+      - Assess: ユーザー満足度・体験品質測定
+```
+
+### スキルレベル別協働戦略
+```yaml
+skill_based_collaboration:
+  beginner_mentoring:
+    focus: "基礎スキル習得・段階的成長支援"
+    defa_strategy:
+      - Define: 学習目標・基礎知識の明確化
+      - Explore: 実践機会・模倣学習の提供
+      - Formulate: 段階的学習計画・評価基準
+      - Act: ペアプログラミング・指導付き実装
+      - Assess: 学習進捗・理解度の評価
+    
+  intermediate_development:
+    focus: "実践スキル向上・自立性の育成"
+    defa_strategy:
+      - Define: 成長目標・挑戦課題の設定
+      - Explore: 新しい技術・手法の学習
+      - Formulate: 自己学習計画・実践戦略
+      - Act: 独立実装・相互レビュー
+      - Assess: スキル向上・自立性の評価
+    
+  advanced_leadership:
+    focus: "リーダーシップ・メンタリング能力開発"
+    defa_strategy:
+      - Define: リーダーシップ目標・影響範囲設定
+      - Explore: チーム運営・指導手法の学習
+      - Formulate: リーダーシップ戦略・メンタリング計画
+      - Act: チーム指導・プロジェクト管理
+      - Assess: リーダーシップ効果・チーム成長評価
+```
+
+## [FORMULATE] 統合チーム協働戦略
+
+### 知識共有・学習促進
+```yaml
+knowledge_sharing:
+  defa_thought_process:
+    - DEF-A思考プロセスの可視化・共有
+    - 問題解決過程の文書化・記録
+    - 意思決定根拠・判断基準の明確化
+    - 学習・改善サイクルの共有
+    
+  technical_knowledge:
+    - 技術的知見・ベストプラクティスの共有
+    - コード・設計パターンの文書化
+    - トラブルシューティング・解決策の蓄積
+    - 新しい技術・手法の学習・共有
+    
+  process_knowledge:
+    - 開発プロセス・ワークフローの最適化
+    - ツール・環境設定の標準化
+    - 品質保証・テスト戦略の共有
+    - 継続的改善・学習プロセスの確立
+```
+
+### コードレビュー・品質保証
+```yaml
+code_review_integration:
+  defa_review_process:
+    - Define: レビュー対象・評価基準の明確化
+    - Explore: コード・設計の多角度分析
+    - Formulate: 改善提案・修正戦略の策定
+    - Act: 修正実装・再レビュー
+    - Assess: レビュー効果・品質向上の評価
+    
+  quality_standards:
+    - 三方よし原則の統一評価
+    - 技術的品質・保守性の評価
+    - ユーザビリティ・アクセシビリティの評価
+    - セキュリティ・パフォーマンスの評価
+    
+  learning_feedback:
+    - 建設的フィードバック・学習支援
+    - スキル向上・成長機会の提供
+    - ベストプラクティス・改善提案の共有
+    - 継続的学習・成長の促進
+```
+
+### ペアプログラミング・協働開発
+```yaml
+pair_programming:
+  defa_collaboration:
+    - Define: 協働目標・役割分担の明確化
+    - Explore: 複数視点からの問題分析
+    - Formulate: 統合解決策・実装戦略の策定
+    - Act: 協調的実装・相互学習
+    - Assess: 協働効果・学習成果の評価
+    
+  collaboration_modes:
+    - Driver-Navigator: 実装者・ナビゲーター役割分担
+    - Ping-Pong: テスト・実装の交互進行
+    - Strong-Style: 経験者主導・学習者観察
+    - Unstructured: 自由な協働・相互支援
+    
+  learning_benefits:
+    - 知識・スキルの相互学習
+    - 問題解決能力の向上
+    - コミュニケーション・協働スキルの向上
+    - コード品質・保守性の向上
+```
+
+## [ACT] 実装ガイドライン
+
+### コミュニケーション・協働ツール
+```yaml
+communication_tools:
+  synchronous_communication:
+    - リアルタイムチャット: Slack, Microsoft Teams
+    - ビデオ会議: Zoom, Google Meet
+    - 画面共有: リモートデスクトップ・画面共有ツール
+    - ホワイトボード: Miro, FigJam
+    
+  asynchronous_communication:
+    - プロジェクト管理: Jira, Trello, Asana
+    - 文書共有: Confluence, Notion, Google Docs
+    - コード管理: GitHub, GitLab, Bitbucket
+    - 知識管理: Wiki, ドキュメント管理システム
+    
+  collaboration_features:
+    - リアルタイム編集: Google Docs, Figma
+    - バージョン管理: Git, ドキュメントバージョン管理
+    - レビュー・コメント: コードレビュー・文書レビュー
+    - 通知・アラート: 進捗通知・重要事項アラート
+```
+
+### チーム開発プロセス
+```yaml
+team_development_process:
+  planning_phase:
+    - プロジェクト目標・要件の共有理解
+    - チーム構成・役割分担の明確化
+    - 技術スタック・開発環境の統一
+    - スケジュール・マイルストーンの策定
+    
+  development_phase:
+    - 定期的な進捗共有・調整
+    - 相互レビュー・フィードバック
+    - 問題解決・意思決定の迅速化
+    - 品質保証・テストの継続的実行
+    
+  review_phase:
+    - 成果物・品質の評価
+    - プロセス・協働の効果測定
+    - 学習・改善点の特定
+    - 次回プロジェクトへの反映
+```
+
+### チーム文化・価値観
+```yaml
+team_culture:
+  shared_values:
+    - 相互尊重・多様性の受容
+    - 継続的学習・成長の促進
+    - 品質・ユーザー価値の重視
+    - 透明性・オープンコミュニケーション
+    
+  collaboration_principles:
+    - 建設的フィードバック・相互支援
+    - 知識共有・学習機会の創出
+    - 責任分担・アカウンタビリティ
+    - 継続的改善・イノベーション
+    
+  conflict_resolution:
+    - オープンな議論・建設的対話
+    - 事実に基づく意思決定
+    - 合意形成・妥協の促進
+    - 学習機会としての活用
+```
+
+## [ASSESS] チーム協働効果の測定
+
+### 協働効果の測定指標
+```yaml
+collaboration_metrics:
+  productivity_metrics:
+    - 開発速度・スループットの向上
+    - 品質・バグ数の改善
+    - 学習・スキル向上の測定
+    - イノベーション・創造性の評価
+    
+  collaboration_metrics:
+    - コミュニケーション頻度・質
+    - 知識共有・学習効果
+    - 相互支援・協働の質
+    - チーム満足度・エンゲージメント
+    
+  quality_metrics:
+    - コード品質・保守性の向上
+    - ユーザー満足度・体験品質
+    - システム安定性・信頼性
+    - 継続的改善・学習効果
+```
+
+### 継続的改善プロセス
+```yaml
+continuous_improvement:
+  regular_assessment:
+    - 週次・月次チーム振り返り
+    - 協働プロセスの効果評価
+    - 改善点・学習機会の特定
+    - 次回アクションの策定
+    
+  team_development:
+    - スキル・能力向上の支援
+    - 新しい技術・手法の学習
+    - リーダーシップ・メンタリング能力開発
+    - チーム文化・価値観の強化
+    
+  process_optimization:
+    - 協働プロセスの最適化
+    - ツール・環境の改善
+    - コミュニケーション・情報共有の効率化
+    - 品質保証・学習促進の強化
+```
+
+## [INTEGRATION] 他ルールとの統合
+
+### 技術領域別ルールとの連携
+```yaml
+rule_integration:
+  frontend_integration:
+    - フロントエンド開発チームの協働強化
+    - ユーザー体験設計の協調的改善
+    - デザイン・開発の連携最適化
+    
+  backend_integration:
+    - バックエンド開発チームの協働強化
+    - システム設計・アーキテクチャの協調的改善
+    - データ・セキュリティの統合管理
+    
+  testing_integration:
+    - テストチームとの協働強化
+    - 品質保証プロセスの統合
+    - 継続的テスト・改善の協調
+    
+  full_stack_integration:
+    - フルスタックチームの協働強化
+    - 技術領域間の連携最適化
+    - 統合システム設計・実装の協調
+```
+
+### DEF-Aフレームワークとの統合
+```yaml
+defa_integration:
+  cognitive_style_balance:
+    - Systems思考: チームプロセス・効率性の最適化
+    - Empathy思考: チームメンバー・ユーザーの理解・配慮
+    
+  application_strategy:
+    - 完全適用: 大規模プロジェクト・戦略的重要性
+    - 部分適用: 中規模プロジェクト・効率性重視
+    - 最小適用: 小規模プロジェクト・迅速対応
+    - 学習支援: スキル向上・教育・メンタリング
+```
+
+## [REFERENCE] 関連リソース
+
+### 協働ツール・プラットフォーム
+- **プロジェクト管理**: Jira, Trello, Asana, Monday.com
+- **コミュニケーション**: Slack, Microsoft Teams, Discord
+- **文書共有**: Confluence, Notion, Google Workspace
+- **コード管理**: GitHub, GitLab, Bitbucket, Azure DevOps
+
+### ベストプラクティス
+- **アジャイル開発**: スクラム・カンバン・XP手法
+- **DevOps**: 継続的統合・継続的デプロイメント
+- **コードレビュー**: プルリクエスト・レビュープロセス
+- **ペアプログラミング**: 協働開発・相互学習手法 

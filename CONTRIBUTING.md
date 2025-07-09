@@ -1,82 +1,176 @@
-# Contributing to Cursor DEF-A Development Framework
+# Contributing to Cursor Rules - DEF-A統合最適化版
 
-Thank you for your interest in contributing to this project! This document provides guidelines for contributing.
+## 🎯 はじめに
 
-## Code of Conduct
+Cursor Rules - DEF-A統合最適化版への貢献をありがとうございます。このプロジェクトは、DEF-AモデルをCursorルールに統合し、効率性と品質の最適バランスを実現することを目指しています。
 
-This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
+## 📁 プロジェクト構成
 
-## How Can I Contribute?
+### ファイル構成
+```
+cursor_user_rules/
+├── rules/                          # ルールファイル
+│   ├── core_rules.cursorrules      # 基本品質基準・DEF-A統合フレームワーク (130行)
+│   ├── rule_selector.cursorrules   # 質問分析・ルール選択システム (387行)
+│   ├── defa_framework.cursorrules  # DEF-Aモデル詳細・段階別ガイドライン (185行)
+│   ├── prompt_templates.cursorrules # プロンプトテンプレート・状況別例 (447行)
+│   ├── frontend_rules.cursorrules  # フロントエンド開発専用ルール
+│   ├── backend_rules.cursorrules   # バックエンド開発専用ルール
+│   └── testing_rules.cursorrules   # テスト・品質保証専用ルール
+├── archive_rules/                  # アーカイブされたルール
+├── README.md                       # プロジェクト概要
+├── DEF-A_INTEGRATION_GUIDE.md      # DEF-A統合詳細ガイド
+├── CONTRIBUTING.md                 # このファイル
+├── CODE_OF_CONDUCT.md             # 行動規範
+├── LICENSE                         # MITライセンス
+└── setup-cursor-rules.sh          # セットアップスクリプト
+```
 
-### Reporting Bugs
+## 🔄 開発フロー
 
-- Use the GitHub issue tracker
-- Include detailed steps to reproduce the bug
-- Describe the expected behavior and actual behavior
-- Include your operating system and Cursor version
+### 1. Issue作成
+- **バグ報告**: 具体的な問題と再現手順を記載
+- **機能要求**: 新機能の必要性と期待する動作を説明
+- **改善提案**: 既存機能の改善案を提案
 
-### Suggesting Enhancements
+### 2. ブランチ作成
+```bash
+# メインブランチから新しいブランチを作成
+git checkout -b feature/your-feature-name
+# または
+git checkout -b fix/your-bug-fix
+```
 
-- Use the GitHub issue tracker with the "enhancement" label
-- Describe the enhancement and its benefits
-- Consider backward compatibility
-- Provide examples if possible
+### 3. 開発・テスト
+- ルールファイルの変更は必ずテスト
+- 既存の機能に影響がないことを確認
+- ドキュメントの更新も忘れずに
 
-### Pull Requests
+### 4. プルリクエスト作成
+- 変更内容の詳細な説明
+- テスト結果の報告
+- 関連するIssueへのリンク
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Test your changes thoroughly
-5. Commit your changes (`git commit -m 'Add some amazing feature'`)
-6. Push to the branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+## 📋 開発ガイドライン
 
-## Development Guidelines
+### ルールファイル作成・編集
 
-### Code Style
+#### 基本原則
+- **可読性**: 明確な変数名、適切なコメント
+- **保守性**: 将来の変更に耐える設計
+- **効率性**: 応答速度と品質の最適バランス
 
-- Follow existing code formatting
-- Use clear, descriptive commit messages
-- Keep changes focused and atomic
-- Test your changes before submitting
+#### DEF-A統合原則
+- **部分適用戦略**: 質問内容に応じた適切なDEF-A段階選択
+- **認知負荷管理**: 緊急度・複雑性に応じた応答最適化
+- **品質基準**: 三方よし・丁度いい・持続可能性の原則
 
-### Security Guidelines
+#### ファイル構造
+```markdown
+# Cursor Rules - [ファイル名] (DEF-A統合最適化版)
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
 
-- Never commit sensitive information (API keys, passwords, etc.)
-- Review changes for potential security implications
-- Follow security best practices
-- Report security issues privately via email
+## [SECTION] セクション名
 
-### Documentation
+### サブセクション
+- **重要項目**: 説明
+- **適用場面**: 使用場面の説明
 
-- Update README.md if adding new features
-- Include examples for new functionality
-- Keep documentation clear and concise
-- Use proper markdown formatting
+### コード例
+```typescript
+// 実装例
+```
 
-## Testing
+## [REFERENCE] 詳細参照
+- **関連ファイル**: 参照先ファイル名
+```
 
-Before submitting a pull request:
+### ドキュメント作成・編集
 
-1. Test the rules in a real Cursor environment
-2. Verify that the changes work as expected
-3. Check that existing functionality is not broken
-4. Ensure all examples in documentation work correctly
+#### README.md
+- プロジェクト概要
+- セットアップ手順
+- 使用方法
+- 技術スタック
+- 効果測定指標
 
-## Review Process
+#### DEF-A_INTEGRATION_GUIDE.md
+- DEF-Aモデルの詳細説明
+- 適用戦略の具体例
+- プロンプトテンプレート
+- 実践的活用戦略
 
-1. All pull requests will be reviewed
-2. Maintainers may request changes
-3. Once approved, changes will be merged
-4. Contributors will be credited in the project
+## 🧪 テスト
 
-## Questions?
+### ルールファイルテスト
+1. **構文チェック**: ルールファイルの構文エラーがないことを確認
+2. **機能テスト**: 実際のCursorで動作確認
+3. **統合テスト**: 他のルールファイルとの連携確認
 
-If you have questions about contributing:
+### ドキュメントテスト
+1. **リンクチェック**: 内部リンク・外部リンクの動作確認
+2. **内容確認**: 技術的精度・説明の分かりやすさ
+3. **一貫性確認**: 他のドキュメントとの整合性
 
-- Open an issue on GitHub
-- Contact the maintainer directly
-- Check existing issues and discussions
+## 📝 コミットメッセージ
 
-Thank you for contributing to the Cursor DEF-A Development Framework! 
+### 形式
+```
+[type] 簡潔な説明
+
+詳細な説明（必要に応じて）
+
+関連Issue: #123
+```
+
+### タイプ
+- `feat`: 新機能
+- `fix`: バグ修正
+- `docs`: ドキュメント更新
+- `style`: コードスタイル修正
+- `refactor`: リファクタリング
+- `test`: テスト追加・修正
+- `chore`: その他の変更
+
+### 例
+```
+[feat] DEF-A部分適用戦略の追加
+
+- 完全適用・部分適用・最小適用の3パターンを実装
+- 認知負荷管理による効率性最適化
+- 質問分析による自動段階選択
+
+関連Issue: #45
+```
+
+## 🤝 レビュープロセス
+
+### プルリクエストレビュー
+1. **コードレビュー**: 技術的精度・品質の確認
+2. **ドキュメントレビュー**: 説明の分かりやすさ・正確性
+3. **統合テスト**: 全体への影響確認
+
+### レビュー基準
+- **機能性**: 要求仕様の満足
+- **品質**: コード・ドキュメントの品質
+- **保守性**: 将来の変更への対応
+- **一貫性**: プロジェクト全体との整合性
+
+## 📄 ライセンス
+
+このプロジェクトはMITライセンスの下で公開されています。貢献するコードもMITライセンスの下で公開されることに同意してください。
+
+## 📞 サポート
+
+### 質問・相談
+- **GitHub Issues**: 技術的な質問・相談
+- **ディスカッション**: 一般的な議論・アイデア共有
+
+### コミュニティ
+- **行動規範**: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)を参照
+- **貢献者**: すべての貢献者に感謝します
+
+---
+
+**Thank you for contributing to Cursor Rules - DEF-A統合最適化版!** 🚀 
