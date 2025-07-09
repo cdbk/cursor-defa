@@ -377,6 +377,8 @@ cp rules/*.cursorrules ~/.cursor/rules/
 - **Act/Apply**: 実行・適用
 - **Assess/Adjust**: 評価・調整
 
+**参考仕様**: [DEF-Aモデル公式サイト](https://cdbk.tokyo/def) - 構造化思考フレームワークの詳細解説
+
 ### 品質原則
 - **三方よし**: 開発者・ユーザー・システム全体の利益
 - **丁度いい**: 過不足のない最適解
