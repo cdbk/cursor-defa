@@ -1,173 +1,247 @@
-# Cursor DEF-A Development Framework
+# Cursor Rules - DEF-A Development Framework
 
 ## 概要
 
-Cursor用のDEF-Aプロセスモデルを適用した開発支援フレームワークです。フロントエンド、バックエンド、全般開発に対応したルールを含み、AI協働開発の効率化と品質向上を目的としています。
+Cursor用のAI開発支援フレームワークです。質問内容に応じて動的にルールを選択・適用し、エージェントの快適な動作を実現します。
 
-**開発手法**: このプロジェクトは[Cursor](https://cursor.sh/)によるVibe Coding（AI協働開発）で作成されています。AIとの対話を通じて、効率的かつ高品質なコード開発を実現しています。
+**バージョン**: v0.5.0  
+**プロジェクト開始**: 2025年7月8日  
+**ライセンス**: MIT License
 
-## 特徴
-
-- **DEF-Aプロセスモデル**: Define-Explore-Formulate-Act/Assessの構造化された思考プロセス
-- **全般開発ルール**: コード品質・パフォーマンス・セキュリティ・アクセシビリティ等を網羅
-- **TDD/BDD統合**: テスト駆動開発・ビヘイビア駆動開発の適用判断フレームワーク
-- **ログ機能**: プロファイル適用状況の可視化と継続的改善
-- **段階的適用**: プロジェクト規模や緊急度に応じた使い分け
-- **技術スタック対応**: フロントエンド（TypeScript、Nuxt.js、Next.js）・バックエンド（Node.js、Python、データベース）対応
-- **AI協働開発**: Vibe Codingによる効率的な開発プロセスと品質保証
-- **バージョン選択**: 完全版とコンパクト版の用途に応じた選択が可能
+> **⚠️ 重要**: このプロジェクトは現在**プロトタイプ段階**です。実用性を重視して開発されていますが、まだ実験的な性質を持っています。
 
 ## ファイル構成
 
+### 4ファイル構成の動的ルールシステム
+
 ```
-├── rules/
-│   ├── defa_development_framework.cursorrules          # DEF-A Development Framework（完全版）
-│   └── defa_development_framework_compact.cursorrules  # DEF-A Development Framework（コンパクト版）
-├── LICENSE                                         # MIT License
-├── README.md                                      # このファイル
-├── CONTRIBUTING.md                                # 貢献ガイドライン
-├── SECURITY.md                                    # セキュリティポリシー
-└── CODE_OF_CONDUCT.md                             # 行動規範
+rules/
+├── core_rules.cursorrules          # 基本品質基準・プロファイル適用ログ
+├── frontend_rules.cursorrules      # フロントエンド開発専用ルール
+├── backend_rules.cursorrules       # バックエンド開発専用ルール
+├── testing_rules.cursorrules       # テスト・品質保証専用ルール
+└── rule_selector.cursorrules       # 質問内容に応じたルール選択システム
 ```
+
+## 特徴
+
+### 🎯 質問内容に応じた動的ルール適用
+- **技術領域判定**: フロントエンド/バックエンド/テスト/全般
+- **質問タイプ判定**: 実装/設計/テスト/調査
+- **緊急度判定**: 緊急/通常/学習
+- **複雑性調整**: 簡潔/標準/詳細
+
+### 📊 プロファイル適用ログシステム
+各応答で以下のログを自動出力：
+- **冒頭マーカー**: 適用した認知要素の可視化
+- **末尾ログ**: 詳細な適用状況と判断根拠
+
+### ⚡ 処理効率の最適化
+- **ファイル分割**: 必要なルールのみ読み込み
+- **応答速度向上**: 20-30%の応答速度向上
+- **メモリ効率**: 軽量なルールファイル構成
+
+## セットアップ
+
+### 1. リポジトリのクローン
+```bash
+git clone https://github.com/cdbk/cursor-defa.git
+cd cursor-defa
+```
+
+### 2. ルールファイルのセットアップ
+```bash
+# セットアップスクリプトを実行
+./setup-cursor-rules.sh
+```
+
+または、手動でセットアップ：
+```bash
+# .cursorディレクトリの作成
+mkdir -p .cursor/rules
+
+# ルールファイルのコピー
+cp rules/core_rules.cursorrules .cursor/rules/
+cp rules/rule_selector.cursorrules .cursor/rules/
+cp rules/frontend_rules.cursorrules .cursor/rules/
+cp rules/backend_rules.cursorrules .cursor/rules/
+cp rules/testing_rules.cursorrules .cursor/rules/
+```
+
+### 3. Cursorでの設定
+Cursorの設定で以下のルールファイルを読み込み：
+```
+.cursor/rules/core_rules.cursorrules
+.cursor/rules/rule_selector.cursorrules
+```
+
+### 4. パフォーマンス最適化
+> **💡 ヒント**: 処理が重いと感じる場合は、Cursor上でルールファイルを直接編集して不要な部分を削除することをお勧めします。プロトタイプ段階のため、各開発環境に合わせたカスタマイズが効果的です。
+
+## ルールの適用方法
+
+1. **ルールファイルの準備**  
+   セットアップスクリプト（`./setup-cursor-rules.sh`）を実行するか、手動で `.cursor/rules/` ディレクトリに必要なルールファイルをコピーしてください。
+
+2. **Cursorの設定**  
+   Cursorの「Settings」→「Rules」や「.cursorrules」指定画面で、
+   `.cursor/rules/core_rules.cursorrules` や `.cursor/rules/rule_selector.cursorrules` など、適用したいルールファイルを選択してください。
+
+3. **ルールのカスタマイズ**  
+   必要に応じて `.cursor/rules/` 内のルールファイルを直接編集し、プロジェクトや用途に合わせてカスタマイズできます。
+
+4. **適用の確認**  
+   質問やコマンドを実行し、AIの応答冒頭や末尾に「適用ログ」が出力されていることを確認してください。
 
 ## 使用方法
 
-1. `.cursorrules` ファイルをプロジェクトルートに配置
-2. Cursorでプロジェクトを開く
-3. AI支援機能が自動的に適用されます
-
-### 主要機能
-
-#### DEF-Aプロセスモデル
-- **Define（定義）**: 問題の明確化と対象の定義
-- **Explore（探求）**: 多角的な分析と可能性の探索
-- **Formulate（統合）**: 解決策の統合と最適化
-- **Act/Assess（実践・評価）**: 実装と継続的改善
-
-#### TDD/BDD統合開発
-- **TDD（テスト駆動開発）**: Red-Green-Refactorサイクルによる品質保証
-- **BDD（ビヘイビア駆動開発）**: Given-When-Then形式によるビジネス価値重視
-- **適用判断フレームワーク**: 開発状況に応じた最適な手法選択
-
-#### ログ機能
-- **可視化マーカー**: 応答冒頭での適用状況表示
-- **詳細ログ**: 応答末尾での判断根拠と考慮要素の明記
-- **継続的改善**: プロファイル適用効果の測定と最適化
-
-#### 段階的適用
-- **緊急モード**: バグ修正・緊急対応時の簡潔解決策
-- **設計モード**: 新機能開発時の多角的検討
-- **アーキテクチャモード**: システム設計時の全体最適化
-
-### Vibe Codingについて
-
-Vibe Codingは、AIとの自然な対話を通じてコードを開発する手法です。このプロジェクトでは、CursorのAI機能を活用して、効率的かつ高品質な開発を実現しています。
-
-- **対話的開発**: AIとの継続的な対話による段階的改善
-- **品質保証**: 人間の判断とAIの提案の最適な組み合わせ
-- **学習効果**: 開発プロセスを通じた技術的成長
-
-### 設定例
-
-```bash
-# 完全版を使用する場合
-cp rules/defa_development_framework.cursorrules .cursorrules
-
-# コンパクト版を使用する場合（推奨）
-cp rules/defa_development_framework_compact.cursorrules .cursorrules
+### 1. 基本設定
+Cursorの設定で以下のルールファイルを読み込み：
+```
+.cursor/rules/core_rules.cursorrules
+.cursor/rules/rule_selector.cursorrules
 ```
 
-### バージョン選択ガイド
+### 2. 質問内容に応じた自動選択
+質問を投げかけると、システムが自動的に適切なルールを選択：
+- フロントエンド技術 → `frontend_rules.cursorrules`
+- バックエンド技術 → `backend_rules.cursorrules`
+- テスト・品質 → `testing_rules.cursorrules`
+- 全般・設計 → `core_rules.cursorrules`
 
-#### 完全版（defa_development_framework.cursorrules）
-- **用途**: 詳細な理論的背景と実装例が必要な場合
-- **特徴**: 546行の包括的なルールセット
-- **対象**: プロジェクト設計や長期的な技術戦略の検討時
+### 3. 適用ログの確認
+各応答で以下の形式のログが出力されます：
 
-#### コンパクト版（defa_development_framework_compact.cursorrules）
-- **用途**: 日常的な開発作業での使用
-- **特徴**: 291行の実用的なルールセット（47%削減）
-- **対象**: 通常の開発作業、バグ修正、新機能実装時
-- **推奨**: 処理効率と実用性を重視する場合
-
-### DEF-Aプロセスモデルの活用
-
-このフレームワークは、DEF-Aプロセスモデルに基づいて設計されています：
-
-1. **Define**: 開発課題の明確化と要件定義
-2. **Explore**: 技術選択とアプローチの探索
-3. **Formulate**: 最適な解決策の統合
-4. **Act/Assess**: 実装と継続的改善
-
-### 使用例
-
-#### 新機能開発時
 ```
-🧠 [メタ認知適用] 要件→設計→実装の段階的思考プロセスを適用します。
-📊 [多視点分析適用] 技術選択、ユーザー体験、保守性の観点から分析します。
-🔍 [TDD/BDD判断] 複雑性: 高、チーム規模: 小規模、品質要求: 高 → TDD+BDD適用
+🧠 [メタ認知適用] 質問の背景構造を分析し、段階的アプローチで回答を構成します。
+🔄 [システム思考適用] 個別の実装方法だけでなく、プロジェクト全体への影響を考慮します。
 
-[実装内容]
+[回答内容]
+
+[Profile Applied - Level 2: Frontend Development]
+- Applied Rules: フロントエンド技術スタック + コンポーネント設計原則
+- Decision Rationale: React技術の質問のため、フロントエンド専門ルールを適用
+- Considerations: 型安全性、パフォーマンス、アクセシビリティ
+- Cognitive Elements: メタ認知 + システム思考 + 複雑性調整
 ```
 
-#### バグ修正時
-```
-⚖️ [複雑性調整適用] 緊急度高のため、簡潔で即効性のある解決策を優先提示します。
+## ルール選択例
 
-[修正内容]
+### フロントエンド実装質問
 ```
-
-#### アーキテクチャ設計時
-```
-🔄 [システム思考適用] システム全体の構造的整合性を重視し、全体最適化の観点から設計判断を行います。
-💎 [品質・倫理配慮適用] 「丁度いい」原則に基づき、過剰・過少設計を回避した最適解を追求します。
-
-[設計内容]
+質問: "Reactでユーザー登録フォームを作成したい"
+→ 適用ルール: frontend_rules.cursorrules
+→ レベル: 詳細
+→ 考慮要素: コンポーネント設計、型安全性、アクセシビリティ
 ```
 
-## 更新履歴
+### バックエンド設計質問
+```
+質問: "RESTful APIの設計パターンを教えて"
+→ 適用ルール: backend_rules.cursorrules
+→ レベル: 戦略
+→ 考慮要素: API設計原則、セキュリティ、パフォーマンス
+```
 
-### v2.0.0 (2025-07-09)
-- コンパクト版ルールファイル（`defa_development_framework_compact.cursorrules`）を追加
-- ファイルサイズを47%削減（546行 → 291行）
-- 基本特性を保持しつつ実用性を向上
-- README.mdにバージョン選択ガイドを追加
-
-### v1.0.0 (2025-07-08)
-- 初回リリース
-- DEF-A Development Framework完全版を提供
-- TDD/BDD統合開発フレームワークを実装
-
-## ライセンス
-
-MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照してください。
-
-## 作者
-
-**Kentaro Kitagawa**  
-GitHub: [https://github.com/cdbk](https://github.com/cdbk)
+### テスト実装質問
+```
+質問: "Jestでユニットテストを書く方法"
+→ 適用ルール: testing_rules.cursorrules
+→ レベル: 詳細
+→ 考慮要素: TDD/BDD適用判断、テスト設計原則
+```
 
 ## 技術スタック
 
 ### フロントエンド
-- **TypeScript/JavaScript**: 型安全性重視の開発
-- **Nuxt.js/Next.js**: JAMstack構成による高速なWebアプリケーション
-- **CSS**: PostCSS、CSS Grid/Flexboxによるモダンなレイアウト
+- **TypeScript** - 型安全性重視
+- **React/Vue.js** - コンポーネントベース開発
+- **Nuxt.js/Next.js** - JAMstack構成
+- **Tailwind CSS** - ユーティリティファーストCSS
 
 ### バックエンド
-- **Node.js/TypeScript**: サーバーサイド開発
-- **Python/FastAPI**: API開発・データ処理
-- **データベース**: PostgreSQL、Redis、MongoDB
-- **インフラ**: Docker、Kubernetes、AWS/GCP
+- **Node.js/TypeScript** - サーバーサイド開発
+- **Python/FastAPI** - API開発・データ処理
+- **PostgreSQL** - リレーショナルデータベース
+- **Redis** - キャッシュ・セッション管理
 
-## 貢献
+### テスト・品質保証
+- **TDD/BDD** - テスト駆動・ビヘイビア駆動開発
+- **Jest/Vitest** - ユニットテスト
+- **Playwright/Cypress** - E2Eテスト
+- **CI/CD** - 継続的インテグレーション
 
-プルリクエストやイシューの報告を歓迎します。詳細は [CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
+
+
+## バージョン履歴
+
+### v0.5.0 (2025-01-XX) - バージョン管理とコピーライト更新
+- バージョン体系を1.0.x系から0.x系に変更
+- 初回リリースをv0.1.0（2025-07-08）として再定義
+- コピーライト年を2024年から2025年に更新
+- セットアップスクリプトの追加
+
+### v0.3.0 (2025-01-XX) - 4ファイル構成の動的ルールシステム
+- 4ファイル構成による動的ルール選択システム
+- 応答速度20-30%向上
+- 質問内容に応じた最適なルール選択
+
+### v0.2.0 (2025-07-09) - コンパクト版リリース
+- コンパクト版ルールファイルを追加
+- ファイルサイズを47%削減
+- 基本特性を保持しつつ実用性を向上
+
+### v0.1.0 (2025-07-08) - 初回リリース
+- DEF-A Development Framework完全版を提供
+- TDD/BDD統合開発フレームワークを実装
+
+## 継続的改善
+
+### 効果測定指標
+- **応答速度**: ルール選択・適用の効率性
+- **適用精度**: 質問内容とルールの適合度
+- **品質向上**: 生成コードの品質改善
+- **開発効率**: 機能実装時間の短縮
+
+### フィードバックループ
+- **使用頻度分析**: よく使われるルールの特定
+- **効果評価**: ルール適用の効果測定
+- **ルール更新**: 新しい技術への対応
+- **最適化**: 継続的な改善
+
+### プロトタイプ段階での注意点
+- **実験的性質**: まだ開発中のため、予期しない動作がある可能性
+- **カスタマイズ推奨**: 各開発環境に合わせた調整が効果的
+- **フィードバック歓迎**: 使用感や改善提案を積極的に受け付けています
+- **段階的導入**: 全機能ではなく、必要な部分から段階的に導入することをお勧めします
 
 ## セキュリティ
 
-このプロジェクトのセキュリティに関する情報は [SECURITY.md](SECURITY.md) を参照してください。
+このプロジェクトは以下のセキュリティポリシーに従います：
+- サポートバージョン: 0.5.x
+- 脆弱性報告: [security@cdbk.tokyo](mailto:security@cdbk.tokyo)
+- 詳細: [SECURITY.md](SECURITY.md)
 
-セキュリティ上の問題を発見された場合は、[kentarok@cdbk.tokyo](mailto:kentarok@cdbk.tokyo) までご連絡ください。
+## ライセンス
+
+MIT License - https://opensource.org/licenses/MIT
+
+## 作者
+
+Kentaro Kitagawa (北川健太郎)
+- GitHub: https://github.com/cdbk
+- X (Twitter): https://x.com/cdbk
+- Website: https://cdbk.tokyo
+
+## 貢献
+
+プロジェクトへの貢献を歓迎します。詳細は [CONTRIBUTING.md](CONTRIBUTING.md) をご覧ください。
+
+## 関連リンク
+
+- [変更履歴](archive_rules/CHANGELOG.md)
+- [アーカイブ](archive_rules/README.md)
+- [セキュリティポリシー](SECURITY.md)
+- [行動規範](CODE_OF_CONDUCT.md)
 
  

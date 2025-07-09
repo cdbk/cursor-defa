@@ -4,6 +4,9 @@
 *.swp
 *.swo
 
+# Cursor IDE
+.cursor/rules/
+
 # OS
 .DS_Store
 Thumbs.db
