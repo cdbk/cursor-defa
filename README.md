@@ -234,7 +234,7 @@ TypeScriptで型安全なAPIクライアントを実装したい
 
 ## 📊 最適化結果サマリー
 
-### ファイルサイズ最適化（2025年1月版）
+### ファイルサイズ最適化
 - **最適化前**: `core_rules.cursorrules` (467行) + `rule_selector.cursorrules` (716行) = 1,183行
 - **最適化後**: 
   - `core_rules.cursorrules` (130行) - コンパクト版
@@ -299,11 +299,5 @@ MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
 ### コミュニティ
 - **ディスカッション**: 技術的な質問・議論
 - **フィードバック**: 改善提案・使用体験
-
----
-
-**Version**: 0.6.0 (DEF-A統合機能強化版)  
-**Last Updated**: 2025年7月  
-**Author**: Kentaro Kitagawa
 
  
