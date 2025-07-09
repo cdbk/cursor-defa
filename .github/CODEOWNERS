@@ -1,0 +1,33 @@
+# CODEOWNERSファイル
+# このファイルは、リポジトリ内のファイルやディレクトリの所有者を定義します
+# 各行は「パターン ユーザー名」の形式で記述します
+
+# リポジトリ全体の所有者
+* @cdbk
+
+# 特定のディレクトリの所有者
+/rules/ @cdbk
+/examples/ @cdbk
+/archive_rules/ @cdbk
+
+# 設定ファイルの所有者
+/.github/ @cdbk
+/.vscode/ @cdbk
+/.cursor/ @cdbk
+
+# ドキュメントファイルの所有者
+*.md @cdbk
+LICENSE @cdbk
+CHANGELOG.md @cdbk
+CODE_OF_CONDUCT.md @cdbk
+CONTRIBUTING.md @cdbk
+SECURITY.md @cdbk
+DEF-A_INTEGRATION_GUIDE.md @cdbk
+
+# スクリプトファイルの所有者
+*.sh @cdbk
+setup-cursor-rules.sh @cdbk
+
+# 設定ファイルの所有者
+.gitignore @cdbk
+.gitattributes @cdbk 
