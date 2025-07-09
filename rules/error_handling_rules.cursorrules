@@ -1,0 +1,335 @@
+# Cursor Rules - Error Handling Integration (DEF-A統合版)
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
+
+## [DEFINE] エラー処理統合戦略
+
+### エラー状況の分類と対応戦略
+```yaml
+error_categories:
+  critical_error:
+    definition: "システム停止・データ損失・セキュリティ侵害"
+    defa_strategy: "Act段階最小適用・緊急対応"
+    priority: "即座対応"
+    
+  functional_error:
+    definition: "機能不全・期待動作と異なる動作"
+    defa_strategy: "Formulate→Act→Assess（修正重視）"
+    priority: "短期対応"
+    
+  performance_error:
+    definition: "パフォーマンス劣化・レスポンス低下"
+    defa_strategy: "Explore→Formulate→Act（分析重視）"
+    priority: "中期的対応"
+    
+  preventive_error:
+    definition: "潜在的問題・将来の障害リスク"
+    defa_strategy: "完全DEF-A適用（予防策設計）"
+    priority: "長期的対応"
+```
+
+### DEF-A段階別エラー処理フロー
+```yaml
+defa_error_flow:
+  define_stage:
+    focus: "エラー状況の構造化定義・影響範囲特定"
+    activities:
+      - エラーメッセージの詳細分析
+      - 影響範囲の明確化（機能・データ・ユーザー）
+      - 緊急度・重要度の判定
+      - 再現手順の記録
+    
+  explore_stage:
+    focus: "根本原因分析・複数解決アプローチ検討"
+    activities:
+      - ログ・スタックトレースの詳細分析
+      - 類似エラーの履歴調査
+      - 複数の解決アプローチ検討
+      - 依存関係・外部要因の分析
+    
+  formulate_stage:
+    focus: "統合的エラー処理戦略・予防策設計"
+    activities:
+      - 最適解決策の選択・設計
+      - 予防策・再発防止策の統合設計
+      - テスト戦略の策定
+      - 段階的実装計画の策定
+    
+  act_stage:
+    focus: "段階的修正実装・テスト"
+    activities:
+      - 最小限の修正実装
+      - 単体テスト・統合テスト実行
+      - 段階的デプロイ・検証
+      - 監視・ログ強化
+    
+  assess_stage:
+    focus: "修正効果測定・再発防止策評価"
+    activities:
+      - 修正効果の定量評価
+      - 副作用・新規問題の確認
+      - 再発防止策の有効性評価
+      - プロセス改善・学習効果測定
+```
+
+## [EXPLORE] エラー処理の多層防御戦略
+
+### 技術層別エラー処理
+```yaml
+technical_layers:
+  frontend_layer:
+    error_types:
+      - JavaScript実行エラー
+      - API通信エラー
+      - UI表示エラー
+      - パフォーマンスエラー
+    defa_application:
+      - Define: エラー発生箇所・ユーザー影響の特定
+      - Explore: ブラウザ互換性・ネットワーク状況分析
+      - Formulate: エラーバウンダリ・フォールバック設計
+      - Act: 段階的修正・ユーザビリティ改善
+      - Assess: エラー率・ユーザー満足度測定
+    
+  backend_layer:
+    error_types:
+      - データベースエラー
+      - API処理エラー
+      - 認証・認可エラー
+      - 外部サービス連携エラー
+    defa_application:
+      - Define: エラー発生箇所・システム影響の特定
+      - Explore: データ整合性・リソース状況分析
+      - Formulate: エラーハンドリング・リトライ戦略設計
+      - Act: 段階的修正・監視強化
+      - Assess: システム安定性・パフォーマンス測定
+    
+  infrastructure_layer:
+    error_types:
+      - サーバーリソース不足
+      - ネットワーク障害
+      - 設定エラー
+      - セキュリティ侵害
+    defa_application:
+      - Define: インフラ状況・影響範囲の特定
+      - Explore: リソース使用状況・設定分析
+      - Formulate: スケーリング・監視戦略設計
+      - Act: 段階的改善・自動化実装
+      - Assess: システム安定性・コスト効率測定
+```
+
+### エラー処理の品質基準
+```yaml
+error_handling_quality:
+  user_experience:
+    - エラーメッセージの分かりやすさ
+    - 復旧手順の明確性
+    - ユーザー作業の継続可能性
+    
+  system_reliability:
+    - エラーの早期検出・対応
+    - データ整合性の維持
+    - システム安定性の向上
+    
+  development_efficiency:
+    - デバッグ情報の充実
+    - エラー原因の迅速特定
+    - 修正・テストの効率化
+    
+  business_continuity:
+    - サービス停止時間の最小化
+    - データ損失の防止
+    - 顧客満足度の維持
+```
+
+## [FORMULATE] 統合エラー処理戦略
+
+### 緊急度別対応戦略
+```yaml
+urgency_based_strategy:
+  immediate_response:
+    defa_focus: "Act段階最小適用"
+    actions:
+      - 緊急停止・影響範囲限定
+      - 一時的回避策の実装
+      - 関係者への即座通知
+      - 監視・ログ強化
+    
+  short_term_fix:
+    defa_focus: "Formulate→Act→Assess"
+    actions:
+      - 根本原因の特定・修正
+      - テスト・検証の実行
+      - 段階的デプロイ
+      - 効果測定・評価
+    
+  long_term_prevention:
+    defa_focus: "完全DEF-A適用"
+    actions:
+      - 予防策・監視強化
+      - 自動化・プロセス改善
+      - チーム教育・スキル向上
+      - 継続的改善体制構築
+```
+
+### エラー処理の学習・改善サイクル
+```yaml
+learning_cycle:
+  incident_analysis:
+    - エラー発生状況の詳細記録
+    - 対応プロセスの評価
+    - 改善点の特定
+    
+  knowledge_sharing:
+    - チーム内での経験共有
+    - ベストプラクティスの文書化
+    - トレーニング・教育実施
+    
+  process_improvement:
+    - エラー処理プロセスの最適化
+    - ツール・自動化の導入
+    - 監視・アラートの改善
+    
+  preventive_measures:
+    - 類似エラーの予防策実装
+    - コードレビュー・テスト強化
+    - インフラ・設定の最適化
+```
+
+## [ACT] 実装ガイドライン
+
+### エラー処理コード実装
+```yaml
+implementation_guidelines:
+  error_logging:
+    - 構造化ログの実装
+    - エラーコンテキストの詳細記録
+    - ログレベル・重要度の適切な設定
+    
+  error_recovery:
+    - 自動復旧機能の実装
+    - フォールバック・代替手段の提供
+    - ユーザーガイダンスの改善
+    
+  monitoring_alerting:
+    - リアルタイム監視の実装
+    - 適切なアラート閾値設定
+    - エスカレーション手順の明確化
+    
+  testing_strategy:
+    - エラーシナリオのテスト実装
+    - 負荷テスト・障害テストの実行
+    - 復旧手順の検証
+```
+
+### チーム協働・コミュニケーション
+```yaml
+team_collaboration:
+  incident_response:
+    - 明確な役割分担・責任分担
+    - コミュニケーション手順の確立
+    - 定期的な訓練・シミュレーション
+    
+  knowledge_management:
+    - エラー事例のデータベース構築
+    - 解決策・ベストプラクティスの共有
+    - 継続的な学習・改善体制
+    
+  quality_assurance:
+    - エラー処理品質の定期的評価
+    - 改善提案・実装の継続
+    - チームスキル・能力の向上
+```
+
+## [ASSESS] 効果測定・継続改善
+
+### エラー処理効果の測定指標
+```yaml
+measurement_metrics:
+  error_frequency:
+    - エラー発生率の推移
+    - エラー種類別の分析
+    - 季節性・パターンの特定
+    
+  response_efficiency:
+    - エラー検出時間の短縮
+    - 対応時間の最適化
+    - 解決率の向上
+    
+  user_impact:
+    - ユーザー影響度の軽減
+    - サービス可用性の向上
+    - 顧客満足度の維持
+    
+  system_reliability:
+    - システム安定性の向上
+    - ダウンタイムの削減
+    - データ整合性の維持
+```
+
+### 継続的改善プロセス
+```yaml
+continuous_improvement:
+  regular_review:
+    - 月次エラー分析・評価
+    - プロセス改善提案
+    - ツール・技術の見直し
+    
+  team_development:
+    - エラー処理スキルの向上
+    - 新しい技術・手法の学習
+    - ベストプラクティスの共有
+    
+  strategic_planning:
+    - 長期的エラー処理戦略の策定
+    - インフラ・アーキテクチャの改善
+    - 自動化・効率化の推進
+```
+
+## [INTEGRATION] 他ルールとの統合
+
+### 技術領域別ルールとの連携
+```yaml
+rule_integration:
+  frontend_integration:
+    - フロントエンドエラーハンドリングの強化
+    - ユーザー体験の最適化
+    - パフォーマンス監視の統合
+    
+  backend_integration:
+    - バックエンドエラー処理の強化
+    - データ整合性の保証
+    - セキュリティ監視の統合
+    
+  testing_integration:
+    - エラーシナリオテストの強化
+    - 品質保証プロセスの改善
+    - 継続的テストの実装
+```
+
+### DEF-Aフレームワークとの統合
+```yaml
+defa_integration:
+  cognitive_style:
+    - Systems思考: エラー処理システムの最適化
+    - Empathy思考: ユーザー影響の深い理解
+    
+  application_strategy:
+    - 完全適用: 重大エラーの包括的対応
+    - 部分適用: 軽微エラーの効率的対応
+    - 最小適用: 緊急対応の迅速実装
+    - 学習支援: エラー処理スキルの向上
+```
+
+## [REFERENCE] 関連リソース
+
+### 参考資料・ツール
+- **エラー監視ツール**: Sentry, LogRocket, Bugsnag
+- **ログ分析ツール**: ELK Stack, Splunk, Datadog
+- **テストツール**: Jest, Cypress, Postman
+- **監視ツール**: Prometheus, Grafana, New Relic
+
+### ベストプラクティス
+- **エラーハンドリング**: 適切な例外処理・ログ記録
+- **ユーザビリティ**: 分かりやすいエラーメッセージ・復旧手順
+- **セキュリティ**: 機密情報の適切な保護・監査ログ
+- **パフォーマンス**: エラー処理の効率化・リソース最適化 

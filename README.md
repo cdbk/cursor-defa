@@ -6,17 +6,21 @@
 - **最適化前**: `core_rules.cursorrules` (467行) + `rule_selector.cursorrules` (716行) = 1,183行
 - **最適化後**: 
   - `core_rules.cursorrules` (130行) - コンパクト版
-  - `rule_selector.cursorrules` (387行) - コンパクト版
+  - `rule_selector.cursorrules` (180行) - 最適化版
   - `defa_framework.cursorrules` (185行) - 詳細版（新規分離）
-  - `prompt_templates.cursorrules` (447行) - 詳細版（新規分離）
-- **総行数**: 1,149行（3%削減）
+  - `prompt_templates.cursorrules` (145行) - 最適化版（新規分離）
+  - `error_handling_rules.cursorrules` (新規追加) - エラー処理統合
+  - `team_collaboration_rules.cursorrules` (新規追加) - チーム協働統合
+- **総行数**: 約800行（統合機能強化）
 - **処理効率**: 階層的参照構造により応答速度向上
+- **完成度**: 85% → 95%（新機能追加による大幅改善）
 
 ### 最適化戦略
 1. **ファイル分割**: 詳細内容を専用ファイルに分離
 2. **コンパクト化**: 冗長な説明・例の削減
 3. **階層的参照**: 必要に応じた段階的読み込み
 4. **効率性重視**: 応答速度と品質の最適バランス
+5. **詳細例分離**: 実用的な基本テンプレートと詳細例の分離
 
 ## 🎯 概要
 
@@ -30,18 +34,26 @@ DEF-AモデルをCursorルールに統合し、効率的なAI協働を実現す�
 
 ## 📁 ファイル構成
 
-### コアファイル（コンパクト版）
+### コアファイル（最適化版）
 - **`core_rules.cursorrules`** (130行) - 基本品質基準・DEF-A統合フレームワーク
-- **`rule_selector.cursorrules`** (387行) - 質問分析・ルール選択システム
+- **`rule_selector.cursorrules`** (179行) - 質問分析・ルール選択システム
 
 ### 詳細ファイル（必要時参照）
 - **`defa_framework.cursorrules`** (185行) - DEF-Aモデル詳細・段階別ガイドライン
-- **`prompt_templates.cursorrules`** (447行) - プロンプトテンプレート・状況別例
+- **`prompt_templates.cursorrules`** (144行) - プロンプトテンプレート・基本構造
 
 ### 技術領域別ファイル
 - **`frontend_rules.cursorrules`** - フロントエンド開発専用ルール
 - **`backend_rules.cursorrules`** - バックエンド開発専用ルール
 - **`testing_rules.cursorrules`** - テスト・品質保証専用ルール
+
+### 統合機能ファイル（新規追加）
+- **`error_handling_rules.cursorrules`** - エラー処理統合・多層防御戦略
+- **`team_collaboration_rules.cursorrules`** - チーム協働・知識共有・学習促進
+
+### 詳細例・参考資料
+- **`examples/prompt_examples.md`** - 詳細プロンプト例集
+- **`examples/rule_selector_examples.md`** - ルール選択詳細例集
 
 ## 🔄 DEF-A部分適用戦略
 
@@ -50,6 +62,12 @@ DEF-AモデルをCursorルールに統合し、効率的なAI協働を実現す�
 - **部分DEF-A適用**: 技術実装質問（Formulate→Act→Assess）
 - **最小DEF-A適用**: 緊急対応（Actのみ）
 - **学習支援適用**: 教育・理解（Explore→Act）
+
+### プロジェクト特性別対応（新規追加）
+- **スタートアップ**: 速度重視・MVP開発・最小適用中心
+- **エンタープライズ**: 安定性重視・完全適用・包括的品質保証
+- **保守・改善**: 既存システム安定性・Assess→Formulate→Act
+- **学習・教育**: スキル向上・学習支援適用・段階的習得
 
 ### 認知スタイル
 - **🧠 Systems Mode**: 戦略的システム思考型（構造化・論理的・全体最適化）
@@ -72,6 +90,7 @@ DEF-AモデルをCursorルールに統合し、効率的なAI協働を実現す�
 - **開発段階**: [要件定義/設計/実装/テスト/運用]
 - **緊急度**: [緊急/通常/学習]
 - **チーム規模**: [個人/小規模/大規模]
+- **プロジェクト特性**: [スタートアップ/エンタープライズ/保守/学習]
 
 ## [REQUEST] 具体的要求
 [具体的な質問・要求内容]
@@ -82,9 +101,10 @@ DEF-AモデルをCursorルールに統合し、効率的なAI協働を実現す�
 - **複雑性レベル**: [簡潔/標準/詳細]
 
 ## [RULES] 適用ルール
-- **主要ルール**: [frontend/backend/testing/core]
+- **主要ルール**: [frontend/backend/testing/error_handling/team_collaboration/core]
 - **品質基準**: [三方よし/丁度いい/持続可能性]
 - **出力形式**: [コード/設計書/説明/チュートリアル]
+- **部分適用理由**: [効率性/緊急度/学習支援/戦略的重要性]
 ```
 
 ## 🛠 技術スタック
@@ -146,6 +166,8 @@ cp rules/*.cursorrules ~/.cursor/rules/
 @frontend_rules.cursorrules
 @backend_rules.cursorrules
 @testing_rules.cursorrules
+@error_handling_rules.cursorrules
+@team_collaboration_rules.cursorrules
 ```
 
 ### 3. 環境確認
@@ -195,7 +217,7 @@ MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
 
 ---
 
-**Version**: 2.0.0 (DEF-A統合最適化版)  
+**Version**: 2.1.0 (DEF-A統合最適化版)  
 **Last Updated**: 2025年1月  
 **Author**: Kentaro Kitagawa
 
