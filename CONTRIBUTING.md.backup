@@ -10,13 +10,13 @@ Cursor Rules - DEF-A統合最適化版への貢献をありがとうございま
 ```
 cursor_user_rules/
 ├── rules/                          # ルールファイル
-│   ├── core_rules.mdc      # 基本品質基準・DEF-A統合フレームワーク (130行)
-│   ├── rule_selector.mdc   # 質問分析・ルール選択システム (387行)
-│   ├── defa_framework.mdc  # DEF-Aモデル詳細・段階別ガイドライン (185行)
-│   ├── prompt_templates.mdc # プロンプトテンプレート・状況別例 (447行)
-│   ├── frontend_rules.mdc  # フロントエンド開発専用ルール
-│   ├── backend_rules.mdc   # バックエンド開発専用ルール
-│   └── testing_rules.mdc   # テスト・品質保証専用ルール
+│   ├── core_rules.cursorrules      # 基本品質基準・DEF-A統合フレームワーク (130行)
+│   ├── rule_selector.cursorrules   # 質問分析・ルール選択システム (387行)
+│   ├── defa_framework.cursorrules  # DEF-Aモデル詳細・段階別ガイドライン (185行)
+│   ├── prompt_templates.cursorrules # プロンプトテンプレート・状況別例 (447行)
+│   ├── frontend_rules.cursorrules  # フロントエンド開発専用ルール
+│   ├── backend_rules.cursorrules   # バックエンド開発専用ルール
+│   └── testing_rules.cursorrules   # テスト・品質保証専用ルール
 ├── archive_rules/                  # アーカイブされたルール
 ├── README.md                       # プロジェクト概要
 ├── DEF-A_INTEGRATION_GUIDE.md      # DEF-A統合詳細ガイド

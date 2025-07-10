@@ -6,14 +6,14 @@
 
 ## ファイル一覧
 
-### defa_development_framework.mdc
+### defa_development_framework.cursorrules
 - **バージョン**: v0.1.0（完全版）
 - **行数**: 547行
 - **特徴**: 包括的な理論的背景と実装例を含む詳細版
 - **用途**: プロジェクト設計や長期的な技術戦略の検討時
 - **リリース日**: 2025-07-08
 
-### defa_development_framework_compact.mdc
+### defa_development_framework_compact.cursorrules
 - **バージョン**: v2.0.0（コンパクト版）
 - **行数**: 292行
 - **特徴**: 実用性重視の簡潔版（47%削減）
@@ -31,38 +31,38 @@
 ### 新システム構成
 ```
 rules/
-├── core_rules.mdc          # 基本品質基準・プロファイル適用ログ
-├── frontend_rules.mdc      # フロントエンド開発専用ルール
-├── backend_rules.mdc       # バックエンド開発専用ルール
-├── testing_rules.mdc       # テスト・品質保証専用ルール
-└── rule_selector.mdc       # 質問内容に応じたルール選択システム
+├── core_rules.cursorrules          # 基本品質基準・プロファイル適用ログ
+├── frontend_rules.cursorrules      # フロントエンド開発専用ルール
+├── backend_rules.cursorrules       # バックエンド開発専用ルール
+├── testing_rules.cursorrules       # テスト・品質保証専用ルール
+└── rule_selector.cursorrules       # 質問内容に応じたルール選択システム
 ```
 
 ### 移行マッピング
 | 旧ファイル | 新ファイル | 内容 |
 |-----------|-----------|------|
-| 基本品質基準 | core_rules.mdc | コード品質、プロファイル適用ログ |
-| フロントエンド技術 | frontend_rules.mdc | React/Vue/Nuxt等のフロントエンド技術 |
-| バックエンド技術 | backend_rules.mdc | API設計、データベース、セキュリティ |
-| TDD/BDD | testing_rules.mdc | テスト駆動開発、品質保証 |
-| ルール選択 | rule_selector.mdc | 質問内容に応じた動的選択 |
+| 基本品質基準 | core_rules.cursorrules | コード品質、プロファイル適用ログ |
+| フロントエンド技術 | frontend_rules.cursorrules | React/Vue/Nuxt等のフロントエンド技術 |
+| バックエンド技術 | backend_rules.cursorrules | API設計、データベース、セキュリティ |
+| TDD/BDD | testing_rules.cursorrules | テスト駆動開発、品質保証 |
+| ルール選択 | rule_selector.cursorrules | 質問内容に応じた動的選択 |
 
 ## 使用方法
 
 ### 旧システムを使用する場合
 ```bash
 # 完全版を使用
-cp archive_rules/defa_development_framework.mdc .mdc
+cp archive_rules/defa_development_framework.cursorrules .cursorrules
 
 # コンパクト版を使用
-cp archive_rules/defa_development_framework_compact.mdc .mdc
+cp archive_rules/defa_development_framework_compact.cursorrules .cursorrules
 ```
 
 ### 新システムを使用する場合（推奨）
 ```bash
 # 基本設定
-cp rules/core_rules.mdc .mdc
-cp rules/rule_selector.mdc .mdc
+cp rules/core_rules.cursorrules .cursorrules
+cp rules/rule_selector.cursorrules .cursorrules
 ```
 
 ## バージョン履歴

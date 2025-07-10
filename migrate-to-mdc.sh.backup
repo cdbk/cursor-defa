@@ -1,0 +1,82 @@
+#!/bin/bash
+
+# Cursor Rules Migration Script - .cursorrules to .mdc
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
+
+echo "🔄 Cursor Rules Migration - .cursorrules to .mdc"
+echo "================================================"
+
+# バックアップディレクトリの作成
+BACKUP_DIR="backup_$(date +%Y%m%d_%H%M%S)"
+echo "📁 Creating backup directory: $BACKUP_DIR"
+mkdir -p "$BACKUP_DIR"
+
+# 現在のファイルをバックアップ
+echo "💾 Backing up current files..."
+cp -r rules "$BACKUP_DIR/"
+cp -r archive_rules "$BACKUP_DIR/"
+cp setup-cursor-rules.sh "$BACKUP_DIR/"
+
+# ファイル拡張子の変更
+echo "🔄 Renaming .cursorrules files to .mdc..."
+
+# rules/defa/ ディレクトリ
+for file in rules/defa/*.cursorrules; do
+    if [ -f "$file" ]; then
+        newfile="${file%.cursorrules}.mdc"
+        mv "$file" "$newfile"
+        echo "  ✅ $file → $newfile"
+    fi
+done
+
+# rules/simple/ ディレクトリ
+for file in rules/simple/*.cursorrules; do
+    if [ -f "$file" ]; then
+        newfile="${file%.cursorrules}.mdc"
+        mv "$file" "$newfile"
+        echo "  ✅ $file → $newfile"
+    fi
+done
+
+# archive_rules/ ディレクトリ
+for file in archive_rules/*.cursorrules; do
+    if [ -f "$file" ]; then
+        newfile="${file%.cursorrules}.mdc"
+        mv "$file" "$newfile"
+        echo "  ✅ $file → $newfile"
+    fi
+done
+
+echo ""
+echo "📝 Updating references in documentation files..."
+
+# ファイル内の参照を更新
+find . -name "*.md" -o -name "*.sh" | while read file; do
+    if [ -f "$file" ]; then
+        # バックアップを作成
+        cp "$file" "$file.backup"
+        
+        # .cursorrules を .mdc に置換
+        sed -i '' 's/\.cursorrules/\.mdc/g' "$file"
+        
+        echo "  ✅ Updated references in $file"
+    fi
+done
+
+# setup-cursor-rules.sh の更新
+echo ""
+echo "🔧 Updating setup script..."
+
+# setup-cursor-rules.sh の更新
+sed -i '' 's/\.cursorrules/\.mdc/g' setup-cursor-rules.sh
+
+echo ""
+echo "✅ Migration completed successfully!"
+echo "📁 Backup created in: $BACKUP_DIR"
+echo ""
+echo "📋 Next steps:"
+echo "1. Review the changes in the backup directory"
+echo "2. Test the updated setup script"
+echo "3. Update any external documentation if needed"
+echo "4. Commit the changes to version control" 

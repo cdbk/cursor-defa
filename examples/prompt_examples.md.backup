@@ -24,8 +24,8 @@
 - **複雑性レベル**: 詳細
 
 ## [RULES] 適用ルール
-- **主要ルール**: frontend_rules.mdc
-- **補助ルール**: core_rules.mdc
+- **主要ルール**: frontend_rules.cursorrules
+- **補助ルール**: core_rules.cursorrules
 - **品質基準**: 三方よし（開発者・ユーザー・システム全体）
 - **出力形式**: 設計書 + 実装ガイド
 - **部分適用理由**: 戦略的重要性（完全分析が必要）
@@ -53,8 +53,8 @@ REST APIとの通信を行う型安全なAPIクライアントを実装したい
 - **複雑性レベル**: 標準
 
 ## [RULES] 適用ルール
-- **主要ルール**: frontend_rules.mdc
-- **補助ルール**: core_rules.mdc
+- **主要ルール**: frontend_rules.cursorrules
+- **補助ルール**: core_rules.cursorrules
 - **品質基準**: 丁度いい（過不足のない実装）
 - **出力形式**: 実装コード + 使用例
 - **部分適用理由**: 効率性（実装に焦点）
@@ -83,7 +83,7 @@ REST APIとの通信を行う型安全なAPIクライアントを実装したい
 - **複雑性レベル**: 簡潔
 
 ## [RULES] 適用ルール
-- **主要ルール**: frontend_rules.mdc
+- **主要ルール**: frontend_rules.cursorrules
 - **品質基準**: 最小限の安全な修正
 - **出力形式**: 修正コード + 緊急デプロイ手順
 - **部分適用理由**: 緊急度（応答速度最優先）
@@ -111,8 +111,8 @@ Reactコンポーネントでの具体例も含めて理解したい。
 - **複雑性レベル**: 詳細
 
 ## [RULES] 適用ルール
-- **主要ルール**: testing_rules.mdc
-- **補助ルール**: core_rules.mdc
+- **主要ルール**: testing_rules.cursorrules
+- **補助ルール**: core_rules.cursorrules
 - **品質基準**: 段階的理解・実践しやすさ
 - **出力形式**: チュートリアル + 実習課題
 - **部分適用理由**: 学習支援（段階的理解重視）
@@ -141,8 +141,8 @@ Reactコンポーネントでの具体例も含めて理解したい。
 - **複雑性レベル**: 詳細
 
 ## [RULES] 適用ルール
-- **主要ルール**: error_handling_rules.mdc
-- **補助ルール**: backend_rules.mdc + core_rules.mdc
+- **主要ルール**: error_handling_rules.cursorrules
+- **補助ルール**: backend_rules.cursorrules + core_rules.cursorrules
 - **品質基準**: 三方よし + システム安定性重視
 - **出力形式**: 分析結果 + 修正コード + 監視強化
 - **部分適用理由**: 戦略的重要性（包括的対応が必要）
@@ -170,8 +170,8 @@ Reactコンポーネントでの具体例も含めて理解したい。
 - **複雑性レベル**: 詳細
 
 ## [RULES] 適用ルール
-- **主要ルール**: team_collaboration_rules.mdc
-- **補助ルール**: frontend_rules.mdc + core_rules.mdc
+- **主要ルール**: team_collaboration_rules.cursorrules
+- **補助ルール**: frontend_rules.cursorrules + core_rules.cursorrules
 - **品質基準**: 学習効果・理解度重視
 - **出力形式**: 学習計画 + メンタリングガイド + 評価指標
 - **部分適用理由**: 学習支援（段階的理解重視）

@@ -16,8 +16,8 @@
 - プロジェクト特性: チーム開発
 
 適用ルール:
-- 主要: backend_rules.mdc
-- 補助: core_rules.mdc
+- 主要: backend_rules.cursorrules
+- 補助: core_rules.cursorrules
 - 応答スタイル: Systems (構造化・論理的)
 - DEF-A段階: Define → Explore → Formulate → Act → Assess
 - 部分適用戦略: 完全適用（戦略的重要性）
@@ -37,8 +37,8 @@
 - プロジェクト特性: 個人開発
 
 適用ルール:
-- 主要: frontend_rules.mdc
-- 補助: core_rules.mdc
+- 主要: frontend_rules.cursorrules
+- 補助: core_rules.cursorrules
 - 応答スタイル: Systems (構造化・論理的)
 - DEF-A段階: Formulate → Act → Assess
 - 部分適用戦略: 実装重視（効率性最適化）
@@ -79,8 +79,8 @@
 - プロジェクト特性: 個人学習
 
 適用ルール:
-- 主要: testing_rules.mdc
-- 補助: core_rules.mdc
+- 主要: testing_rules.cursorrules
+- 補助: core_rules.cursorrules
 - 応答スタイル: Empathy (段階的・温かみのある)
 - DEF-A段階: Explore → Act（学習・実践）
 - 部分適用戦略: 学習支援（段階的理解重視）
@@ -102,8 +102,8 @@
 - プロジェクト特性: チーム開発
 
 適用ルール:
-- 主要: backend_rules.mdc (認証システムはバックエンド中心)
-- 補助: frontend_rules.mdc + core_rules.mdc
+- 主要: backend_rules.cursorrules (認証システムはバックエンド中心)
+- 補助: frontend_rules.cursorrules + core_rules.cursorrules
 - 応答スタイル: Systems (構造化・論理的)
 - DEF-A段階: Formulate → Act（統合・実装）
 - 部分適用戦略: 実装重視（効率性と品質のバランス）
@@ -123,8 +123,8 @@
 - プロジェクト特性: チーム開発
 
 適用ルール:
-- 主要: testing_rules.mdc
-- 補助: core_rules.mdc
+- 主要: testing_rules.cursorrules
+- 補助: core_rules.cursorrules
 - 応答スタイル: Systems (構造化・論理的)
 - DEF-A段階: Assess → Explore → Formulate（評価→改善策検討→計画）
 - 部分適用戦略: プロセス改善重視（持続可能性）

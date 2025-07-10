@@ -15,7 +15,7 @@
 ### 🔄 強化内容
 - **セットアップスクリプト改善**: `setup-cursor-rules.sh` 大幅更新
   - インタラクティブ選択機能（シンプル版・DEF-A統合版・両方）
-  - 自動設定提案（選択したバージョンに応じた`.mdc`設定例）
+  - 自動設定提案（選択したバージョンに応じた`.cursorrules`設定例）
   - ファイル名管理（両方インストール時の重複回避）
 - **README最適化**: 構成と情報の優先順位を整理
   - 新規訪問者向けの分かりやすい構成
@@ -27,21 +27,21 @@
 ```
 rules/
 ├── simple/          # シンプル版（初心者・個人開発向け）
-│   ├── core_rules.mdc (71行)
-│   ├── rule_selector.mdc (246行)
-│   ├── frontend_rules.mdc (82行)
-│   ├── backend_rules.mdc (98行)
-│   └── testing_rules.mdc (191行)
+│   ├── core_rules.cursorrules (71行)
+│   ├── rule_selector.cursorrules (246行)
+│   ├── frontend_rules.cursorrules (82行)
+│   ├── backend_rules.cursorrules (98行)
+│   └── testing_rules.cursorrules (191行)
 └── defa/            # DEF-A統合版（上級者・チーム向け）
-    ├── core_rules.mdc (156行)
-    ├── rule_selector.mdc (190行)
-    ├── defa_framework.mdc (185行)
-    ├── prompt_templates.mdc (145行)
-    ├── frontend_rules.mdc (82行)
-    ├── backend_rules.mdc (98行)
-    ├── testing_rules.mdc (191行)
-    ├── error_handling_rules.mdc (335行)
-    └── team_collaboration_rules.mdc (372行)
+    ├── core_rules.cursorrules (156行)
+    ├── rule_selector.cursorrules (190行)
+    ├── defa_framework.cursorrules (185行)
+    ├── prompt_templates.cursorrules (145行)
+    ├── frontend_rules.cursorrules (82行)
+    ├── backend_rules.cursorrules (98行)
+    ├── testing_rules.cursorrules (191行)
+    ├── error_handling_rules.cursorrules (335行)
+    └── team_collaboration_rules.cursorrules (372行)
 ```
 
 ### 📊 効果測定
@@ -55,24 +55,24 @@ rules/
 ## v0.6.0 (2025-07-09) - 統合機能強化版
 
 ### 🚀 新機能
-- **エラー処理統合**: `error_handling_rules.mdc` 新規追加
+- **エラー処理統合**: `error_handling_rules.cursorrules` 新規追加
   - DEF-A段階別エラー処理フロー
   - 技術層別エラー処理戦略（フロントエンド・バックエンド・インフラ）
   - 緊急度別対応戦略（即座対応・短期修正・長期予防）
   - 学習・改善サイクルの統合
-- **チーム協働統合**: `team_collaboration_rules.mdc` 新規追加
+- **チーム協働統合**: `team_collaboration_rules.cursorrules` 新規追加
   - チーム特性別協働戦略（小規模・中規模・大規模・分散チーム）
   - 認知スタイル別チーム協働（Systems・Empathy思考）
   - スキルレベル別協働戦略（初心者・中級者・上級者）
   - 知識共有・学習促進・コードレビュー統合
 
 ### 🔄 強化内容
-- **プロジェクト特性対応**: `core_rules.mdc` に新セクション追加
+- **プロジェクト特性対応**: `core_rules.cursorrules` に新セクション追加
   - スタートアップ: 速度重視・MVP開発・最小適用中心
   - エンタープライズ: 安定性重視・完全適用・包括的品質保証
   - 保守・改善: 既存システム安定性・Assess→Formulate→Act
   - 学習・教育: スキル向上・学習支援適用・段階的習得
-- **ルールセレクター強化**: `rule_selector.mdc` 拡張
+- **ルールセレクター強化**: `rule_selector.cursorrules` 拡張
   - エラー処理・チーム協働の判定ロジック追加
   - プロジェクト特性適応ロジック強化
   - 新規ルールファイルの統合
@@ -113,11 +113,11 @@ rules/
 ### 📁 新ファイル構成
 ```
 rules/
-├── core_rules.mdc          # 基本品質基準・プロファイル適用ログ
-├── frontend_rules.mdc      # フロントエンド開発専用ルール
-├── backend_rules.mdc       # バックエンド開発専用ルール
-├── testing_rules.mdc       # テスト・品質保証専用ルール
-└── rule_selector.mdc       # 質問内容に応じたルール選択システム
+├── core_rules.cursorrules          # 基本品質基準・プロファイル適用ログ
+├── frontend_rules.cursorrules      # フロントエンド開発専用ルール
+├── backend_rules.cursorrules       # バックエンド開発専用ルール
+├── testing_rules.cursorrules       # テスト・品質保証専用ルール
+└── rule_selector.cursorrules       # 質問内容に応じたルール選択システム
 ```
 
 ### 🔄 移行内容
@@ -145,8 +145,8 @@ rules/
 ### 📁 ファイル構成
 ```
 rules/
-├── defa_development_framework.mdc          # 完全版（547行）
-└── defa_development_framework_compact.mdc  # コンパクト版（292行）
+├── defa_development_framework.cursorrules          # 完全版（547行）
+└── defa_development_framework_compact.cursorrules  # コンパクト版（292行）
 ```
 
 ### 🔧 改善点
@@ -173,7 +173,7 @@ rules/
 ### 📁 ファイル構成
 ```
 rules/
-└── defa_development_framework.mdc          # 完全版（547行）
+└── defa_development_framework.cursorrules          # 完全版（547行）
 ```
 
 ### 🔧 主要機能

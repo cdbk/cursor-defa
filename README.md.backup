@@ -9,7 +9,7 @@
 
 ### 🚀 段階的導入の推奨
 1. **シンプル版**: `rules/simple/` フォルダ内のルールセット
-2. **基本セット**: 基本ルールのみ（`core_rules.mdc`）
+2. **基本セット**: 基本ルールのみ（`core_rules.cursorrules`）
 3. **拡張セット**: + 技術領域別ルール（フロントエンド/バックエンド/テスト）
 4. **DEF-A統合版**: `rules/defa/` フォルダ内の完全なルールセット（チーム開発向け）
 
@@ -30,44 +30,44 @@ cd cursor_user_rules
 #### シンプル版セットアップ
 ```bash
 # シンプル版ルールを配置
-cp rules/simple/core_rules.mdc ~/.cursor/rules/
-cp rules/simple/rule_selector.mdc ~/.cursor/rules/
+cp rules/simple/core_rules.cursorrules ~/.cursor/rules/
+cp rules/simple/rule_selector.cursorrules ~/.cursor/rules/
 ```
 
 ```json
-// .mdc
-@core_rules.mdc
-@rule_selector.mdc
+// .cursorrules
+@core_rules.cursorrules
+@rule_selector.cursorrules
 ```
 
 #### DEF-A統合版セットアップ（チーム開発向け）
 ```bash
 # DEF-A統合版ルールファイル配置
-cp rules/defa/*.mdc ~/.cursor/rules/
+cp rules/defa/*.cursorrules ~/.cursor/rules/
 ```
 
 ```json
-// .mdc
-@core_rules.mdc
-@rule_selector.mdc
-@defa_framework.mdc
-@prompt_templates.mdc
-@frontend_rules.mdc
-@backend_rules.mdc
-@testing_rules.mdc
-@error_handling_rules.mdc
-@team_collaboration_rules.mdc
+// .cursorrules
+@core_rules.cursorrules
+@rule_selector.cursorrules
+@defa_framework.cursorrules
+@prompt_templates.cursorrules
+@frontend_rules.cursorrules
+@backend_rules.cursorrules
+@testing_rules.cursorrules
+@error_handling_rules.cursorrules
+@team_collaboration_rules.cursorrules
 ```
 
 ## 📁 ファイル構成
 
 ### シンプル版
 **`rules/simple/`** フォルダ内のルールセット
-- **`core_rules.mdc`** (71行) - 基本品質基準・シンプル版
-- **`rule_selector.mdc`** (246行) - 質問分析・ルール選択（シンプル版）
-- **`frontend_rules.mdc`** (82行) - フロントエンド開発専用ルール
-- **`backend_rules.mdc`** (98行) - バックエンド開発専用ルール
-- **`testing_rules.mdc`** (191行) - テスト・品質保証専用ルール
+- **`core_rules.cursorrules`** (71行) - 基本品質基準・シンプル版
+- **`rule_selector.cursorrules`** (246行) - 質問分析・ルール選択（シンプル版）
+- **`frontend_rules.cursorrules`** (82行) - フロントエンド開発専用ルール
+- **`backend_rules.cursorrules`** (98行) - バックエンド開発専用ルール
+- **`testing_rules.cursorrules`** (191行) - テスト・品質保証専用ルール
 
 **特徴**: DEF-Aモデル適用前の直感的で分かりやすい構成
 
@@ -75,21 +75,21 @@ cp rules/defa/*.mdc ~/.cursor/rules/
 **`rules/defa/`** フォルダ内のルールセット
 
 #### コアファイル（必須）
-- **`core_rules.mdc`** (156行) - 基本品質基準・DEF-A統合フレームワーク
-- **`rule_selector.mdc`** (190行) - 質問分析・ルール選択システム
+- **`core_rules.cursorrules`** (156行) - 基本品質基準・DEF-A統合フレームワーク
+- **`rule_selector.cursorrules`** (190行) - 質問分析・ルール選択システム
 
 #### 詳細ファイル（必要時参照）
-- **`defa_framework.mdc`** (185行) - DEF-Aモデル詳細・段階別ガイドライン
-- **`prompt_templates.mdc`** (145行) - プロンプトテンプレート・基本構造
+- **`defa_framework.cursorrules`** (185行) - DEF-Aモデル詳細・段階別ガイドライン
+- **`prompt_templates.cursorrules`** (145行) - プロンプトテンプレート・基本構造
 
 #### 技術領域別ファイル
-- **`frontend_rules.mdc`** (82行) - フロントエンド開発専用ルール
-- **`backend_rules.mdc`** (98行) - バックエンド開発専用ルール
-- **`testing_rules.mdc`** (191行) - テスト・品質保証専用ルール
+- **`frontend_rules.cursorrules`** (82行) - フロントエンド開発専用ルール
+- **`backend_rules.cursorrules`** (98行) - バックエンド開発専用ルール
+- **`testing_rules.cursorrules`** (191行) - テスト・品質保証専用ルール
 
 #### 統合機能ファイル（新規追加）
-- **`error_handling_rules.mdc`** (335行) - エラー処理統合・多層防御戦略
-- **`team_collaboration_rules.mdc`** (372行) - チーム協働・知識共有・学習促進
+- **`error_handling_rules.cursorrules`** (335行) - エラー処理統合・多層防御戦略
+- **`team_collaboration_rules.cursorrules`** (372行) - チーム協働・知識共有・学習促進
 
 ## 💡 使用例
 
@@ -124,7 +124,7 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **複雑性レベル**: 標準
 
 ## [RULES] 適用ルール
-- **主要ルール**: frontend_rules.mdc
+- **主要ルール**: frontend_rules.cursorrules
 - **品質基準**: 三方よし
 - **出力形式**: 実装コード + 使用例
 ```
@@ -235,14 +235,14 @@ TypeScriptで型安全なAPIクライアントを実装したい
 ## 📊 最適化結果サマリー
 
 ### ファイルサイズ最適化
-- **最適化前**: `core_rules.mdc` (467行) + `rule_selector.mdc` (716行) = 1,183行
+- **最適化前**: `core_rules.cursorrules` (467行) + `rule_selector.cursorrules` (716行) = 1,183行
 - **最適化後**: 
-  - `core_rules.mdc` (130行) - コンパクト版
-  - `rule_selector.mdc` (180行) - 最適化版
-  - `defa_framework.mdc` (185行) - 詳細版（新規分離）
-  - `prompt_templates.mdc` (145行) - 最適化版（新規分離）
-  - `error_handling_rules.mdc` (新規追加) - エラー処理統合
-  - `team_collaboration_rules.mdc` (新規追加) - チーム協働統合
+  - `core_rules.cursorrules` (130行) - コンパクト版
+  - `rule_selector.cursorrules` (180行) - 最適化版
+  - `defa_framework.cursorrules` (185行) - 詳細版（新規分離）
+  - `prompt_templates.cursorrules` (145行) - 最適化版（新規分離）
+  - `error_handling_rules.cursorrules` (新規追加) - エラー処理統合
+  - `team_collaboration_rules.cursorrules` (新規追加) - チーム協働統合
 - **総行数**: 約800行（統合機能強化）
 - **処理効率**: 階層的参照構造により応答速度向上
 - **完成度**: 85% → 95%（新機能追加による大幅改善）
@@ -280,25 +280,6 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **コード品質**: 可読性・保守性を重視
 - **ドキュメント**: 包括的な説明・例の提供
 - **テスト**: 品質保証・動作確認
-
-#### ルール自動テストスクリプト
-- **test_rules.py**: ルールファイルの存在・品質・ルールセレクターの自動テスト
-- **test_rules_detailed.py**: ルール構造・網羅性・一貫性・実効性まで多角的に検証
-
-```bash
-# ルール自動テストの実行例
-python3 test_rules.py
-python3 test_rules_detailed.py
-```
-- **目的**: ルールセットの品質・一貫性・自動判定ロジックの正しさを継続的に保証
-- **出力**: テスト結果サマリー・詳細レポートを標準出力に表示
-- **注意**: テストスクリプト自体はMITライセンスで公開可能
-
-##### テストスクリプトがない場合の確認方法
-- **ルールセレクター機能**: 質問内容から技術領域（フロントエンド/バックエンド/テスト/全般）を正しく判定できるか手動確認
-- **実効性**: 実際のCursorでの質問応答で、適切なルールが適用されているか動作確認
-- **一貫性**: 各ルールファイルの構造・記述スタイル・品質基準が統一されているか目視確認
-- **網羅性**: 必要な技術領域・開発段階・品質基準がカバーされているか内容確認
 
 ### 貢献プロセス
 1. **Issue作成**: 改善提案・バグ報告
