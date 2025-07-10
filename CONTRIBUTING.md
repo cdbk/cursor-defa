@@ -9,17 +9,29 @@ Cursor Rules - DEF-A統合最適化版への貢献をありがとうございま
 ### ファイル構成
 ```
 cursor_user_rules/
-├── rules/                          # ルールファイル
-│   ├── core_rules.cursorrules      # 基本品質基準・DEF-A統合フレームワーク (130行)
-│   ├── rule_selector.cursorrules   # 質問分析・ルール選択システム (387行)
-│   ├── defa_framework.cursorrules  # DEF-Aモデル詳細・段階別ガイドライン (185行)
-│   ├── prompt_templates.cursorrules # プロンプトテンプレート・状況別例 (447行)
-│   ├── frontend_rules.cursorrules  # フロントエンド開発専用ルール
-│   ├── backend_rules.cursorrules   # バックエンド開発専用ルール
-│   └── testing_rules.cursorrules   # テスト・品質保証専用ルール
+├── rules/
+│   ├── simple/                     # シンプル版（初心者・個人開発向け）
+│   │   ├── core_rules.cursorrules      # 基本品質基準・シンプル版 (71行)
+│   │   ├── rule_selector.cursorrules   # 質問分析・ルール選択 (259行)
+│   │   ├── frontend_rules.cursorrules  # フロントエンド開発専用ルール (82行)
+│   │   ├── backend_rules.cursorrules   # バックエンド開発専用ルール (98行)
+│   │   ├── testing_rules.cursorrules   # テスト・品質保証専用ルール (191行)
+│   │   └── knowledge_management_rules.cursorrules # 知識管理・学習支援 (新規)
+│   └── defa/                       # DEF-A統合版（上級者・チーム開発向け）
+│       ├── core_rules.cursorrules      # 基本品質基準・DEF-A統合フレームワーク (156行)
+│       ├── rule_selector.cursorrules   # 質問分析・ルール選択システム (190行)
+│       ├── defa_framework.cursorrules  # DEF-Aモデル詳細・段階別ガイドライン (185行)
+│       ├── prompt_templates.cursorrules # プロンプトテンプレート・基本構造 (145行)
+│       ├── frontend_rules.cursorrules  # フロントエンド開発専用ルール (82行)
+│       ├── backend_rules.cursorrules   # バックエンド開発専用ルール (98行)
+│       ├── testing_rules.cursorrules   # テスト・品質保証専用ルール (191行)
+│       ├── error_handling_rules.cursorrules # エラー処理統合・多層防御戦略 (335行)
+│       ├── team_collaboration_rules.cursorrules # チーム協働・知識共有・学習促進 (372行)
+│       └── knowledge_management_rules.cursorrules # SECIモデル統合・暗黙知自動ルール化 (新規)
 ├── archive_rules/                  # アーカイブされたルール
-├── README.md                       # プロジェクト概要
-├── DEF-A_INTEGRATION_GUIDE.md      # DEF-A統合詳細ガイド
+├── examples/                       # 使用例・サンプル
+├── README.md                       # プロジェクト概要・クイックスタート
+├── DEF-A_INTEGRATION_GUIDE.md      # DEF-A統合詳細ガイド・実践的活用
 ├── CONTRIBUTING.md                 # このファイル
 ├── CODE_OF_CONDUCT.md             # 行動規範
 ├── LICENSE                         # MITライセンス
@@ -60,10 +72,15 @@ git checkout -b fix/your-bug-fix
 - **保守性**: 将来の変更に耐える設計
 - **効率性**: 応答速度と品質の最適バランス
 
-#### DEF-A統合原則
+#### DEF-A統合原則（DEF-A統合版のみ）
 - **部分適用戦略**: 質問内容に応じた適切なDEF-A段階選択
 - **認知負荷管理**: 緊急度・複雑性に応じた応答最適化
 - **品質基準**: 三方よし・丁度いい・持続可能性の原則
+
+#### シンプル版原則
+- **直感的理解**: 複雑な概念を排除した分かりやすい構成
+- **実用性重視**: 即座に活用できる実践的な内容
+- **段階的学習**: 基礎から応用への自然な移行
 
 #### ファイル構造
 ```markdown
@@ -96,10 +113,10 @@ git checkout -b fix/your-bug-fix
 - 効果測定指標
 
 #### DEF-A_INTEGRATION_GUIDE.md
-- DEF-Aモデルの詳細説明
-- 適用戦略の具体例
-- プロンプトテンプレート
-- 実践的活用戦略
+- DEF-Aモデルの詳細説明・実践的活用戦略
+- 適用戦略の具体例・プロンプトテンプレート
+- 高度な使用方法・最適化テクニック
+- シンプル版からDEF-A統合版への移行ガイド
 
 ## 🧪 テスト
 
@@ -160,16 +177,6 @@ git checkout -b fix/your-bug-fix
 ## 📄 ライセンス
 
 このプロジェクトはMITライセンスの下で公開されています。貢献するコードもMITライセンスの下で公開されることに同意してください。
-
-## 📞 サポート
-
-### 質問・相談
-- **GitHub Issues**: 技術的な質問・相談
-- **ディスカッション**: 一般的な議論・アイデア共有
-
-### コミュニティ
-- **行動規範**: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)を参照
-- **貢献者**: すべての貢献者に感謝します
 
 ---
 

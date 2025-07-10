@@ -158,6 +158,31 @@ continuous_improvement_cycle:
 
 ## [ACT] 実装・実行戦略
 
+### 日付管理・自動取得システム
+```yaml
+date_management_system:
+  automatic_date_retrieval:
+    command: "date +%Y-%m-%d"
+    purpose: "システムの正確な日付を取得"
+    usage_scenarios:
+      - CHANGELOG.mdの更新日付
+      - ファイル作成日時の記録
+      - バージョン管理の日付タグ
+      - ドキュメントの最終更新日
+    
+  date_validation_process:
+    - システム日付の自動取得
+    - 取得日付の検証・確認
+    - 必要に応じた手動修正
+    - 日付形式の統一化（YYYY-MM-DD）
+  
+  implementation_guidelines:
+    - 日付記載が必要な場合は必ずシステム日付を取得
+    - 取得した日付は必ず検証してから使用
+    - 日付形式は統一（YYYY-MM-DD形式を推奨）
+    - タイムゾーンはシステム設定に従う
+```
+
 ### 自動ルール化システムの実装
 ```yaml
 auto_rule_implementation:
