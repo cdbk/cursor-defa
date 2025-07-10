@@ -27,20 +27,20 @@ cd cursor_user_rules
 
 ### 手動セットアップ
 
-#### シンプル版セットアップ
+#### シンプル版セットアップ（初心者・個人開発向け）
 ```bash
 # シンプル版ルールを配置
-cp rules/simple/core_rules.cursorrules ~/.cursor/rules/
-cp rules/simple/rule_selector.cursorrules ~/.cursor/rules/
+cp rules/simple/*.cursorrules ~/.cursor/rules/
 ```
 
 ```json
 // .cursorrules
 @core_rules.cursorrules
 @rule_selector.cursorrules
+@knowledge_management_rules.cursorrules
 ```
 
-#### DEF-A統合版セットアップ（チーム開発向け）
+#### DEF-A統合版セットアップ（上級者・チーム開発向け）
 ```bash
 # DEF-A統合版ルールファイル配置
 cp rules/defa/*.cursorrules ~/.cursor/rules/
@@ -57,17 +57,21 @@ cp rules/defa/*.cursorrules ~/.cursor/rules/
 @testing_rules.cursorrules
 @error_handling_rules.cursorrules
 @team_collaboration_rules.cursorrules
+@knowledge_management_rules.cursorrules
 ```
+
+**詳細なセットアップ手順**: [DEF-A_INTEGRATION_GUIDE.md](DEF-A_INTEGRATION_GUIDE.md) を参照
 
 ## 📁 ファイル構成
 
 ### シンプル版
 **`rules/simple/`** フォルダ内のルールセット
 - **`core_rules.cursorrules`** (71行) - 基本品質基準・シンプル版
-- **`rule_selector.cursorrules`** (246行) - 質問分析・ルール選択（シンプル版）
+- **`rule_selector.cursorrules`** (259行) - 質問分析・ルール選択（シンプル版）
 - **`frontend_rules.cursorrules`** (82行) - フロントエンド開発専用ルール
 - **`backend_rules.cursorrules`** (98行) - バックエンド開発専用ルール
 - **`testing_rules.cursorrules`** (191行) - テスト・品質保証専用ルール
+- **`knowledge_management_rules.cursorrules`** (新規) - 知識管理・学習支援・暗黙知ルール化
 
 **特徴**: DEF-Aモデル適用前の直感的で分かりやすい構成
 
@@ -90,10 +94,11 @@ cp rules/defa/*.cursorrules ~/.cursor/rules/
 #### 統合機能ファイル（新規追加）
 - **`error_handling_rules.cursorrules`** (335行) - エラー処理統合・多層防御戦略
 - **`team_collaboration_rules.cursorrules`** (372行) - チーム協働・知識共有・学習促進
+- **`knowledge_management_rules.cursorrules`** (新規) - SECIモデル統合・暗黙知自動ルール化システム
 
 ## 💡 使用例
 
-### シンプル版使用例
+### シンプル版使用例（初心者・個人開発向け）
 ```markdown
 # Cursor プロンプト - シンプル指示
 
@@ -105,7 +110,7 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **出力形式**: 実装コード + 簡単な説明
 ```
 
-### DEF-A統合版使用例（チーム開発向け）
+### DEF-A統合版使用例（上級者・チーム開発向け）
 ```markdown
 # Cursor プロンプト - DEF-A統合指示
 
@@ -128,6 +133,8 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **品質基準**: 三方よし
 - **出力形式**: 実装コード + 使用例
 ```
+
+**詳細な使用例・プロンプトテンプレート**: [DEF-A_INTEGRATION_GUIDE.md](DEF-A_INTEGRATION_GUIDE.md) を参照
 
 ## ⚠️ 重要: 複雑性について
 
@@ -163,37 +170,19 @@ TypeScriptで型安全なAPIクライアントを実装したい
 
 ## 📋 使用方法
 
-### 基本使用フロー
-1. **質問分析**: 質問内容からDEF-A段階・認知スタイルを判定
-2. **ルール選択**: 技術領域に応じた適切なルールファイルを選択
-3. **部分適用**: 質問特性に応じたDEF-A段階を適用
-4. **品質基準**: 三方よし・丁度いい・持続可能性の原則を適用
+### シンプル版使用フロー
+1. **質問分析**: 技術領域・質問タイプの判定
+2. **ルール選択**: 適切なルールファイルの選択
+3. **実装**: 品質基準に基づく実装
+4. **学習**: 知識管理・継続的改善
 
-### プロンプトテンプレート（詳細版）
-```markdown
-# Cursor プロンプト - DEF-A統合指示
+### DEF-A統合版使用フロー
+1. **質問分析**: DEF-A段階・認知スタイルの判定
+2. **ルール選択**: 技術領域に応じた適切なルールファイル選択
+3. **部分適用**: 質問特性に応じたDEF-A段階の適用
+4. **品質基準**: 三方よし・丁度いい・持続可能性の原則適用
 
-## [CONTEXT] 開発状況
-- **プロジェクト**: [プロジェクト名・特性]
-- **開発段階**: [要件定義/設計/実装/テスト/運用]
-- **緊急度**: [緊急/通常/学習]
-- **チーム規模**: [個人/小規模/大規模]
-- **プロジェクト特性**: [スタートアップ/エンタープライズ/保守/学習]
-
-## [REQUEST] 具体的要求
-[具体的な質問・要求内容]
-
-## [DEF-A] 思考フロー指定
-- **適用段階**: [Define/Explore/Formulate/Act/Assess]
-- **認知スタイル**: [Systems思考重視/Empathy共感重視]
-- **複雑性レベル**: [簡潔/標準/詳細]
-
-## [RULES] 適用ルール
-- **主要ルール**: [frontend/backend/testing/error_handling/team_collaboration/core]
-- **品質基準**: [三方よし/丁度いい/持続可能性]
-- **出力形式**: [コード/設計書/説明/チュートリアル]
-- **部分適用理由**: [効率性/緊急度/学習支援/戦略的重要性]
-```
+**詳細な使用方法・プロンプトテンプレート**: [DEF-A_INTEGRATION_GUIDE.md](DEF-A_INTEGRATION_GUIDE.md) を参照
 
 ## 🛠 対応技術スタック
 
@@ -214,6 +203,13 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **Jest/Vitest**: テストフレームワーク
 - **CI/CD**: 継続的インテグレーション
 - **コードレビュー**: 品質保証プロセス
+
+### 知識管理・学習
+- **SECIモデル**: 暗黙知の形式知化・知識共有
+- **自動ルール化**: プロジェクト固有知識の自動記録
+- **継続的改善**: 学習効果・スキル向上の測定
+- **チーム学習**: 知識共有・メンタリング・協働学習
+- **日付管理**: システム日付の自動取得・検証による正確性確保
 
 ## 📈 効果測定指標
 
@@ -243,9 +239,17 @@ TypeScriptで型安全なAPIクライアントを実装したい
   - `prompt_templates.cursorrules` (145行) - 最適化版（新規分離）
   - `error_handling_rules.cursorrules` (新規追加) - エラー処理統合
   - `team_collaboration_rules.cursorrules` (新規追加) - チーム協働統合
-- **総行数**: 約800行（統合機能強化）
+  - `knowledge_management_rules.cursorrules` (新規追加) - SECIモデル統合・暗黙知自動ルール化・日付管理システム
+- **総行数**: 約900行（統合機能強化）
 - **処理効率**: 階層的参照構造により応答速度向上
 - **完成度**: 85% → 95%（新機能追加による大幅改善）
+
+### 新機能追加（v0.7.0以降）
+- **日付管理システム**: システム日付の自動取得・検証機能
+  - 自動取得コマンド: `date +%Y-%m-%d`
+  - 統一形式: YYYY-MM-DD
+  - 使用場面: CHANGELOG、ファイル作成日、バージョン管理
+  - 検証プロセス: 取得日付の確認・修正
 
 ### 最適化戦略
 1. **ファイル分割**: 詳細内容を専用ファイルに分離
@@ -286,18 +290,20 @@ TypeScriptで型安全なAPIクライアントを実装したい
 2. **ブランチ作成**: 機能開発・修正
 3. **プルリクエスト**: コードレビュー・マージ
 
+## 📚 参考資料
+
+### 詳細ガイド
+- **[DEF-A_INTEGRATION_GUIDE.md](DEF-A_INTEGRATION_GUIDE.md)**: DEF-A統合の詳細説明・実践的活用戦略
+- **[CONTRIBUTING.md](CONTRIBUTING.md)**: 開発・貢献ガイドライン
+- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)**: コミュニティ行動規範
+
+### 使用例・サンプル
+- **`examples/prompt_examples.md`**: 詳細プロンプト例集
+- **`examples/rule_selector_examples.md`**: ルール選択詳細例集
+
 ## 📄 ライセンス
 
 MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
 
-## 📞 サポート
-
-### 問題報告
-- **GitHub Issues**: バグ報告・機能要求
-- **ドキュメント**: 使用方法・トラブルシューティング
-
-### コミュニティ
-- **ディスカッション**: 技術的な質問・議論
-- **フィードバック**: 改善提案・使用体験
 
  

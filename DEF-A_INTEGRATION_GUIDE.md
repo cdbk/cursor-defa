@@ -6,17 +6,29 @@
 
 ## 📊 最適化結果サマリー
 
-### ファイル構成最適化（2025年1月版）
-- **コアファイル（コンパクト版）**:
-  - `core_rules.cursorrules` (130行) - 基本品質基準・DEF-A統合フレームワーク
-  - `rule_selector.cursorrules` (387行) - 質問分析・ルール選択システム
-- **詳細ファイル（必要時参照）**:
+### ファイル構成最適化
+
+#### シンプル版（初心者・個人開発向け）
+- **`rules/simple/`** フォルダ内のルールセット
+  - `core_rules.cursorrules` (71行) - 基本品質基準・シンプル版
+  - `rule_selector.cursorrules` (259行) - 質問分析・ルール選択
+  - `frontend_rules.cursorrules` (82行) - フロントエンド開発専用ルール
+  - `backend_rules.cursorrules` (98行) - バックエンド開発専用ルール
+  - `testing_rules.cursorrules` (191行) - テスト・品質保証専用ルール
+  - `knowledge_management_rules.cursorrules` (新規) - 知識管理・学習支援
+
+#### DEF-A統合版（上級者・チーム開発向け）
+- **`rules/defa/`** フォルダ内のルールセット
+  - `core_rules.cursorrules` (156行) - 基本品質基準・DEF-A統合フレームワーク
+  - `rule_selector.cursorrules` (190行) - 質問分析・ルール選択システム
   - `defa_framework.cursorrules` (185行) - DEF-Aモデル詳細・段階別ガイドライン
-  - `prompt_templates.cursorrules` (447行) - プロンプトテンプレート・状況別例
-- **技術領域別ファイル**:
-  - `frontend_rules.cursorrules` - フロントエンド開発専用ルール
-  - `backend_rules.cursorrules` - バックエンド開発専用ルール
-  - `testing_rules.cursorrules` - テスト・品質保証専用ルール
+  - `prompt_templates.cursorrules` (145行) - プロンプトテンプレート・基本構造
+  - `frontend_rules.cursorrules` (82行) - フロントエンド開発専用ルール
+  - `backend_rules.cursorrules` (98行) - バックエンド開発専用ルール
+  - `testing_rules.cursorrules` (191行) - テスト・品質保証専用ルール
+  - `error_handling_rules.cursorrules` (335行) - エラー処理統合・多層防御戦略
+  - `team_collaboration_rules.cursorrules` (372行) - チーム協働・知識共有・学習促進
+  - `knowledge_management_rules.cursorrules` (新規) - SECIモデル統合・暗黙知自動ルール化
 
 ### 最適化戦略
 1. **ファイル分割**: 詳細内容を専用ファイルに分離
@@ -341,19 +353,31 @@ Reactコンポーネントでの具体例も含めて理解したい。
 
 ## 🚀 セットアップ手順
 
-### 1. 基本セットアップ
+### 1. シンプル版セットアップ（初心者・個人開発向け）
 ```bash
 # リポジトリクローン
 git clone [repository-url]
 cd cursor_user_rules
 
-# ルールファイル配置
-cp rules/*.cursorrules ~/.cursor/rules/
+# シンプル版ルールファイル配置
+cp rules/simple/*.cursorrules ~/.cursor/rules/
 ```
 
-### 2. Cursor設定
 ```json
-// .cursorrules
+// .cursorrules（シンプル版）
+@core_rules.cursorrules
+@rule_selector.cursorrules
+@knowledge_management_rules.cursorrules
+```
+
+### 2. DEF-A統合版セットアップ（上級者・チーム開発向け）
+```bash
+# DEF-A統合版ルールファイル配置
+cp rules/defa/*.cursorrules ~/.cursor/rules/
+```
+
+```json
+// .cursorrules（DEF-A統合版）
 @core_rules.cursorrules
 @rule_selector.cursorrules
 @defa_framework.cursorrules
@@ -361,12 +385,21 @@ cp rules/*.cursorrules ~/.cursor/rules/
 @frontend_rules.cursorrules
 @backend_rules.cursorrules
 @testing_rules.cursorrules
+@error_handling_rules.cursorrules
+@team_collaboration_rules.cursorrules
+@knowledge_management_rules.cursorrules
 ```
 
-### 3. 環境確認
+### 3. 自動セットアップ（推奨）
+```bash
+# セットアップスクリプトを実行
+./setup-cursor-rules.sh
+```
+
+### 4. 環境確認
 - **Cursor**: 最新版推奨
-- **Node.js**: v18以上
-- **TypeScript**: v5以上
+- **Node.js**: v18以上（フロントエンド開発時）
+- **TypeScript**: v5以上（型安全性重視時）
 
 ## 📚 参考資料
 
@@ -399,19 +432,3 @@ cp rules/*.cursorrules ~/.cursor/rules/
 ## 📄 ライセンス
 
 MIT License - 詳細は[LICENSE](LICENSE)ファイルを参照
-
-## 📞 サポート
-
-### 問題報告
-- **GitHub Issues**: バグ報告・機能要求
-- **ドキュメント**: 使用方法・トラブルシューティング
-
-### コミュニティ
-- **ディスカッション**: 技術的な質問・議論
-- **フィードバック**: 改善提案・使用体験
-
----
-
-**Version**: 2.0.0 (DEF-A統合最適化版)  
-**Last Updated**: 2025年1月  
-**Author**: Kentaro Kitagawa 

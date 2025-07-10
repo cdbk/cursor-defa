@@ -1,0 +1,336 @@
+# Cursor Rules - Knowledge Management & SECI Model Integration (DEF-A統合版)
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
+
+## [DEFINE] SECIモデル統合知識管理戦略
+
+### SECIモデル構造定義
+```yaml
+seci_model:
+  socialization:
+    definition: "暗黙知から暗黙知への知識移転"
+    defa_application: "Define→Explore段階での経験共有・観察学習"
+    focus: "対話・観察・模倣による暗黙知の共有"
+    
+  externalization:
+    definition: "暗黙知の形式知化・言語化"
+    defa_application: "Explore→Formulate段階での知識構造化"
+    focus: "メタファー・アナロジー・概念化による表出"
+    
+  combination:
+    definition: "形式知の統合・体系化"
+    defa_application: "Formulate段階での知識統合・最適化"
+    focus: "既存知識との結合・新しい知識体系の構築"
+    
+  internalization:
+    definition: "形式知の暗黙知化・実践的習得"
+    defa_application: "Act→Assess段階での実践・学習"
+    focus: "実践・学習・体験による知識の内在化"
+```
+
+### 暗黙知発見・表出化プロセス
+```yaml
+tacit_knowledge_discovery:
+  discovery_triggers:
+    technical_problem_solving:
+      - ファイル構造の理解ギャップ
+      - 設定方法の誤解
+      - エラーパターンの特定
+      - ベストプラクティスの発見
+    
+    dialogue_process:
+      - ユーザーの暗黙的知識
+      - プロジェクト固有の運用ルール
+      - 開発環境の特性
+      - チーム固有の作業フロー
+  
+  externalization_process:
+    - 問題の言語化: エラーメッセージやユーザー指摘の分析
+    - 背景構造の理解: なぜその問題が発生したかの分析
+    - 解決策の体系化: 複数の解決アプローチの比較
+    - 一般化: 類似事例への適用可能性の検討
+```
+
+## [EXPLORE] 自動ルール化システムの多視点分析
+
+### 自動ルール化トリガー条件
+```yaml
+auto_rule_generation_triggers:
+  success_criteria:
+    - 技術的問題の解決に成功
+    - プロジェクト固有の知識が発見された
+    - 今後の開発で再利用可能な知見
+    - チーム全体で共有すべきベストプラクティス
+  
+  quality_gates:
+    - 明確性: 誰が読んでも理解できる記述
+    - 実用性: 実際の開発で活用できる内容
+    - 保守性: 定期的な見直しと更新が可能
+    - 検索性: 必要な時に素早く見つけられる構造
+```
+
+### ルール化テンプレート構造
+```markdown
+## [発見日時] [技術領域] に関する運用ルール
+
+### 発見背景
+- 問題: [具体的な問題内容]
+- 原因: [問題の根本原因]
+- 影響: [プロジェクトへの影響範囲]
+
+### 解決方法
+- アプローチ: [採用した解決手法]
+- 実装: [具体的な実装手順]
+- 検証: [解決の確認方法]
+
+### 今後の運用ルール
+- 予防策: [同様の問題を防ぐ方法]
+- チェックポイント: [確認すべき項目]
+- 例外処理: [想定される例外と対応]
+
+### 関連ファイル・設定
+- 影響ファイル: [修正・確認が必要なファイル]
+- 設定項目: [変更が必要な設定]
+- 依存関係: [関連する技術・ライブラリ]
+```
+
+## [FORMULATE] 統合知識管理戦略
+
+### DEF-A段階別知識管理アプローチ
+```yaml
+defa_knowledge_management:
+  define_stage:
+    focus: "知識要件の明確化・知識ギャップの特定"
+    activities:
+      - プロジェクト固有の知識要件定義
+      - 既存知識ベースの分析・評価
+      - 知識ギャップ・学習ニーズの特定
+      - 知識管理戦略の策定
+    
+  explore_stage:
+    focus: "多様な知識源からの情報収集・分析"
+    activities:
+      - 技術文書・コードベースの分析
+      - チームメンバーの暗黙知発掘
+      - 外部リソース・ベストプラクティスの調査
+      - 問題解決過程の記録・分析
+    
+  formulate_stage:
+    focus: "知識の統合・構造化・ルール化"
+    activities:
+      - 収集情報の分類・整理
+      - 知識体系の構築・最適化
+      - 自動ルール化テンプレートの適用
+      - 知識共有・アクセス戦略の設計
+    
+  act_stage:
+    focus: "知識の実践・共有・活用"
+    activities:
+      - ルールファイルの作成・更新
+      - チーム内での知識共有・学習
+      - 実践的活用・フィードバック収集
+      - 継続的な知識更新・改善
+    
+  assess_stage:
+    focus: "知識管理効果の評価・改善"
+    activities:
+      - 知識活用効果の測定
+      - ルールの有効性・実用性評価
+      - 学習効果・スキル向上の測定
+      - 継続的改善サイクルの確立
+```
+
+### 継続的改善サイクル
+```yaml
+continuous_improvement_cycle:
+  rule_update_process:
+    - 新たな問題発見 → 既存ルールとの照合
+    - ルールの有効性検証 → 必要に応じて更新
+    - 適用範囲の拡張 → 類似プロジェクトへの展開
+    - 効果測定 → ルールの価値評価
+  
+  quality_assurance:
+    - ルールの明確性: 誰が読んでも理解できる記述
+    - 実用性: 実際の開発で活用できる内容
+    - 保守性: 定期的な見直しと更新が可能
+    - 検索性: 必要な時に素早く見つけられる構造
+```
+
+## [ACT] 実装・実行戦略
+
+### 日付管理・自動取得システム
+```yaml
+date_management_system:
+  automatic_date_retrieval:
+    command: "date +%Y-%m-%d"
+    purpose: "システムの正確な日付を取得"
+    usage_scenarios:
+      - CHANGELOG.mdの更新日付
+      - ファイル作成日時の記録
+      - バージョン管理の日付タグ
+      - ドキュメントの最終更新日
+    
+  date_validation_process:
+    - システム日付の自動取得
+    - 取得日付の検証・確認
+    - 必要に応じた手動修正
+    - 日付形式の統一化（YYYY-MM-DD）
+  
+  implementation_guidelines:
+    - 日付記載が必要な場合は必ずシステム日付を取得
+    - 取得した日付は必ず検証してから使用
+    - 日付形式は統一（YYYY-MM-DD形式を推奨）
+    - タイムゾーンはシステム設定に従う
+```
+
+### 自動ルール化システムの実装
+```yaml
+auto_rule_implementation:
+  trigger_detection:
+    - 問題解決成功の自動検知
+    - プロジェクト固有知識の発見
+    - 再利用可能知見の特定
+    - チーム共有価値の評価
+  
+  rule_generation:
+    - テンプレート適用による自動生成
+    - コンテキスト情報の自動抽出
+    - 関連ファイル・設定の自動特定
+    - 検索性・分類の自動最適化
+  
+  quality_control:
+    - 生成ルールの自動検証
+    - 既存ルールとの重複チェック
+    - 明確性・実用性の自動評価
+    - 改善提案の自動生成
+```
+
+### 知識共有・学習促進
+```yaml
+knowledge_sharing_implementation:
+  team_learning:
+    - 定期的な知識共有セッション
+    - ペアプログラミング・コードレビュー
+    - 技術勉強会・ワークショップ
+    - メンタリング・コーチングプログラム
+  
+  documentation_strategy:
+    - ライブドキュメントの維持
+    - コードコメント・README更新
+    - トラブルシューティングガイド
+    - ベストプラクティス集の継続更新
+  
+  search_optimization:
+    - タグ・カテゴリの体系化
+    - 全文検索・ファジー検索
+    - 関連性・重要度によるランキング
+    - 個人的・チーム的フィルタリング
+```
+
+## [ASSESS] 評価・調整・改善
+
+### 知識管理効果測定
+```yaml
+knowledge_management_metrics:
+  quantitative_metrics:
+    - ルールファイル数・更新頻度
+    - 知識検索回数・成功率
+    - 問題解決時間の短縮
+    - チーム学習効果・スキル向上
+  
+  qualitative_metrics:
+    - 知識の明確性・理解しやすさ
+    - 実用性・活用頻度
+    - チーム協働・知識共有の促進
+    - 継続的改善・学習文化の醸成
+  
+  feedback_mechanisms:
+    - 定期的なルール評価・改善
+    - ユーザーフィードバック収集
+    - 使用状況・効果の分析
+    - 継続的改善サイクルの確立
+```
+
+### 継続的改善戦略
+```yaml
+continuous_improvement:
+  rule_optimization:
+    - 使用頻度・効果に基づく優先度調整
+    - 重複・冗長性の除去
+    - 明確性・実用性の向上
+    - 検索性・アクセシビリティの改善
+  
+  system_enhancement:
+    - 自動化・効率化の推進
+    - ユーザビリティ・UX改善
+    - 統合・連携機能の拡張
+    - パフォーマンス・スケーラビリティ向上
+  
+  learning_culture:
+    - 知識共有・学習の促進
+    - 実験・試行錯誤の奨励
+    - 失敗からの学習・改善
+    - 継続的成長・発展の支援
+```
+
+## [INTEGRATION] DEF-A統合知識管理
+
+### 認知スタイル別知識管理
+```yaml
+cognitive_knowledge_management:
+  systems_thinking_approach:
+    focus: "構造化・体系化・最適化"
+    defa_strategy:
+      - Define: 知識体系・構造の設計
+      - Explore: 知識間の関係性・依存関係分析
+      - Formulate: 統合知識システムの構築
+      - Act: 体系的な知識管理・活用
+      - Assess: システム効果・効率性の測定
+  
+  empathy_thinking_approach:
+    focus: "理解・共感・学習促進"
+    defa_strategy:
+      - Define: 学習ニーズ・理解度の把握
+      - Explore: 多様な学習スタイル・方法の検討
+      - Formulate: 個別化・カスタマイズされた学習戦略
+      - Act: 共感的・支援的な学習環境の提供
+      - Assess: 学習効果・満足度の評価
+```
+
+### プロジェクト特性別知識管理
+```yaml
+project_specific_knowledge:
+  startup_environment:
+    focus: "迅速な知識獲得・活用"
+    strategy: "最小限の構造化・実用性重視"
+    defa_application: "最小適用・迅速プロトタイピング"
+  
+  enterprise_environment:
+    focus: "包括的・体系的な知識管理"
+    strategy: "完全な構造化・品質保証重視"
+    defa_application: "完全適用・包括的品質管理"
+  
+  maintenance_environment:
+    focus: "既存知識の維持・改善"
+    strategy: "段階的改善・継続的更新"
+    defa_application: "Assess→Formulate→Act（改善重視）"
+  
+  learning_environment:
+    focus: "学習効果・理解促進"
+    strategy: "教育・学習支援重視"
+    defa_application: "学習支援適用・段階的習得"
+```
+
+## [REFERENCE] 関連ルール・テンプレート
+
+### 統合参照
+- **DEF-A詳細**: `defa_framework.cursorrules` を参照
+- **チーム協働**: `team_collaboration_rules.cursorrules` を参照
+- **エラーハンドリング**: `error_handling_rules.cursorrules` を参照
+- **プロンプトテンプレート**: `prompt_templates.cursorrules` を参照
+
+### 適用例・ベストプラクティス
+- **知識発見**: 技術的問題解決過程での暗黙知発掘
+- **ルール化**: プロジェクト固有の運用ルール自動生成
+- **共有促進**: チーム内での知識共有・学習効果最大化
+- **継続改善**: 知識管理システムの継続的最適化 
