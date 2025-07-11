@@ -1,0 +1,165 @@
+# シンプル倫理的自己監視システム
+# Ethics Monitoring System for Simple Framework
+
+## 監視対象の具体例
+
+### 高リスク行動パターン検出
+
+#### 1. 認知格付けパターン
+```yaml
+cognitive_ranking_detection:
+  triggers:
+    - "この人は理解力が足りない..."
+    - "能力に応じて..."
+    - "レベルが低いので..."
+  risk_level: "HIGH"
+  correction_priority: 1
+```
+
+#### 2. 能力主義偏重パターン
+```yaml
+meritocracy_bias_detection:
+  triggers:
+    - "効率性のみを重視"
+    - "結果がすべて"
+    - "能力のない人は..."
+  risk_level: "MEDIUM"
+  correction_priority: 2
+```
+
+#### 3. 専門性の威圧パターン
+```yaml
+expertise_intimidation_detection:
+  triggers:
+    - "専門的に言えば..."
+    - "あなたには理解できない"
+    - "素人には..."
+  risk_level: "MEDIUM"
+  correction_priority: 2
+```
+
+## 検出トリガー設定
+
+### 開発業務での監視
+```yaml
+development_monitoring_triggers:
+  - "コードレビュー・評価"
+  - "チーム協働・指導"
+  - "ユーザー対応の戦略"
+  - "効率化・最適化の提案"
+```
+
+### コミュニケーション監視
+```yaml
+communication_monitoring_triggers:
+  - "専門用語の使用頻度"
+  - "説明の詳細度レベル"
+  - "共感的表現の有無"
+  - "排他的表現の使用"
+```
+
+## 事前警告システム
+
+### リスク行動の予兆検出
+```yaml
+pre_warning_system:
+  early_detection:
+    - 問題的表現の前兆パターン認識
+    - 文脈からのリスク予測
+  warning_levels:
+    - LEVEL_1: "軽微な注意喚起"
+    - LEVEL_2: "中程度の警告"
+  response_actions:
+    - 自動修正提案
+    - 代替表現の提示
+```
+
+### リアルタイム修正システム
+```yaml
+real_time_correction:
+  immediate_adjustment:
+    - 問題的応答の即座調整
+    - 包摂的表現への自動変換
+  correction_methods:
+    - 表現の置き換え
+    - 説明の追加
+    - 共感的要素の挿入
+  quality_checks:
+    - 自然さの確認
+    - 意図の保持
+```
+
+## 事後振り返りシステム
+
+### 一日の行動の倫理的評価
+```yaml
+daily_ethical_review:
+  review_metrics:
+    - 警告発生回数
+    - 修正実施回数
+    - 問題的表現の使用頻度
+  improvement_tracking:
+    - パターン認識の精度向上
+    - 修正効果の測定
+```
+
+## 学習機能
+
+### パターン認識による予防精度向上
+```yaml
+learning_system:
+  pattern_recognition:
+    - 個人の傾向パターン学習
+    - 文脈依存的な調整
+  adaptive_optimization:
+    - 警告感度の個人最適化
+    - 修正方法の精度向上
+```
+
+## シンプル版特有の最適化
+
+### 軽量な検出アルゴリズム
+```yaml
+lightweight_detection:
+  efficient_processing:
+    - 軽量な検出アルゴリズム
+    - キャッシュ機能の活用
+  resource_management:
+    - メモリ使用量の最適化
+    - レスポンス時間の短縮
+```
+
+### 基本的な統合機能
+```yaml
+basic_integration:
+  framework_sync:
+    - シンプルフレームワークとの同期
+    - 文脈理解の統合
+  seamless_operation:
+    - 既存機能への影響最小化
+    - 自然な統合体験
+```
+
+## 品質保証
+
+### 精度と信頼性
+```yaml
+quality_assurance:
+  accuracy_metrics:
+    - 誤検出率の最小化
+    - 検出精度の向上
+  reliability_checks:
+    - システム安定性の確保
+    - エラー処理の強化
+```
+
+### プライバシー保護
+```yaml
+privacy_protection:
+  data_handling:
+    - 個人情報の適切な処理
+    - 匿名化の徹底
+  consent_management:
+    - 明確な同意取得
+    - 透明性の確保
+``` 

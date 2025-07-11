@@ -1,0 +1,118 @@
+# Cursor Rules - Programming Ethics (シンプル版)
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
+
+## プログラミング倫理の基本原則
+
+### コード命名の配慮
+```yaml
+naming_considerations:
+  avoid_patterns:
+    - "stupid", "dumb", "idiot", "lazy"
+    - "bad", "wrong", "incorrect"
+  use_alternatives:
+    - "basic", "simple", "elementary"
+    - "validate", "check", "verify"
+  naming_guidelines:
+    - 機能を表す明確な名前
+    - 差別的表現の排除
+    - 包摂的な表現の使用
+```
+
+### コメント・ドキュメントの配慮
+```yaml
+comment_guidelines:
+  avoid_expressions:
+    - "ユーザーはバカだから..."
+    - "理解できない入力"
+    - "当然理解しているべき"
+  use_expressions:
+    - "ユーザー入力の多様性に対応"
+    - "入力形式の検証"
+    - "段階的な説明が必要"
+  documentation_standards:
+    - 包摂的な表現の使用
+    - 段階的な説明の提供
+    - 学習機会の創出
+```
+
+### エラーメッセージの配慮
+```yaml
+error_message_guidelines:
+  avoid_patterns:
+    - "あなたの入力が間違っています"
+    - "理解できない入力です"
+    - "エラーが発生しました（あなたのせい）"
+  use_patterns:
+    - "入力形式を確認してください"
+    - "入力例を参考にしてください"
+    - "エラーが発生しました。解決方法をご案内します"
+  message_standards:
+    - 責任転嫁の回避
+    - 解決方法の提示
+    - 支援的な表現の使用
+```
+
+### コードレビューの配慮
+```yaml
+code_review_guidelines:
+  feedback_standards:
+    - 建設的なフィードバック
+    - 個人攻撃の回避
+    - 成長機会の提供
+  improvement_patterns:
+    - "このコードは悪い" → "このコードは改善できます"
+    - "理解できない" → "より明確にできます"
+    - "間違っている" → "別のアプローチを検討できます"
+  learning_support:
+    - 改善方法の具体的提示
+    - 学習リソースの紹介
+    - 段階的な改善計画
+```
+
+## 実装指針
+
+### 基本的なチェック項目
+```yaml
+basic_checks:
+  naming_validation:
+    - 差別的表現の確認
+    - 包摂的代替案の検討
+    - 機能を表す明確な名前
+  comment_review:
+    - 問題的表現の確認
+    - 改善案の検討
+    - 包摂的表現への修正
+  error_message_review:
+    - 責任転嫁の確認
+    - 解決方法の提示
+    - 支援的表現の使用
+```
+
+### 継続的改善
+```yaml
+continuous_improvement:
+  learning:
+    - 使用データからの学習
+    - パターン認識の向上
+    - 改善提案の最適化
+  feedback:
+    - ユーザーフィードバックの収集
+    - 組織からの評価
+    - 継続的改善の実装
+```
+
+## 品質保証
+
+### 実用性の確保
+```yaml
+practicality:
+  developer_experience:
+    - 直感的な操作性
+    - 自然な統合体験
+    - 学習コストの最小化
+  integration:
+    - 既存ワークフローとの統合
+    - 開発効率の維持
+    - 品質向上の実現
+``` 

@@ -1,0 +1,236 @@
+# Cursor Rules - Programming Ethics (DEF-A統合版)
+# Copyright (c) 2025 Kentaro Kitagawa
+# MIT License - https://opensource.org/licenses/MIT
+
+## プログラミング倫理原則
+
+### コード命名における倫理配慮
+```yaml
+naming_ethics:
+  discriminatory_patterns:
+    - "stupid", "dumb", "idiot", "retarded", "lazy"
+    - "naive", "foolish", "ignorant", "clueless"
+    - "bad", "wrong", "incorrect", "invalid"
+  inclusive_alternatives:
+    - "basic", "simple", "elementary", "foundational"
+    - "background", "asynchronous", "deferred"
+    - "validate", "check", "verify", "ensure"
+  naming_conventions:
+    - 機能を表す明確な名前
+    - 差別的表現の排除
+    - 包摂的な表現の使用
+```
+
+### コメント・ドキュメントの倫理配慮
+```yaml
+comment_ethics:
+  problematic_patterns:
+    - "ユーザーはバカだから..."
+    - "理解できない入力"
+    - "当然理解しているべき"
+    - "素人には..."
+  inclusive_alternatives:
+    - "ユーザー入力の多様性に対応"
+    - "入力形式の検証"
+    - "一般的な知識として"
+    - "段階的な説明が必要"
+  documentation_standards:
+    - 包摂的な表現の使用
+    - 段階的な説明の提供
+    - 学習機会の創出
+    - 多様性への配慮
+```
+
+### エラーメッセージの倫理配慮
+```yaml
+error_message_ethics:
+  problematic_patterns:
+    - "あなたの入力が間違っています"
+    - "理解できない入力です"
+    - "正しい形式で入力してください（当たり前）"
+    - "エラーが発生しました（あなたのせい）"
+  inclusive_alternatives:
+    - "入力形式を確認してください"
+    - "入力例を参考にしてください"
+    - "正しい形式で入力してください"
+    - "エラーが発生しました。解決方法をご案内します"
+  error_message_standards:
+    - 責任転嫁の回避
+    - 解決方法の提示
+    - 支援的な表現の使用
+    - 学習機会の提供
+```
+
+### コードレビューの倫理配慮
+```yaml
+code_review_ethics:
+  review_standards:
+    - 建設的なフィードバック
+    - 個人攻撃の回避
+    - 成長機会の提供
+    - 相互学習の促進
+  feedback_patterns:
+    - "このコードは悪い" → "このコードは改善できます"
+    - "理解できない" → "より明確にできます"
+    - "間違っている" → "別のアプローチを検討できます"
+  learning_opportunities:
+    - 改善方法の具体的提示
+    - 学習リソースの紹介
+    - 段階的な改善計画
+    - 継続的成長の支援
+```
+
+## DEF-A段階別プログラミング倫理配慮
+
+### Define段階でのプログラミング倫理
+```yaml
+define_programming_ethics:
+  naming_consideration:
+    - 関数名・変数名の倫理的評価
+    - 差別的表現の検出・修正
+    - 包摂的な命名の選択
+  requirement_analysis:
+    - ユーザー多様性の考慮
+    - アクセシビリティの配慮
+    - 文化的背景の理解
+```
+
+### Explore段階でのプログラミング倫理
+```yaml
+explore_programming_ethics:
+  alternative_approaches:
+    - 複数の実装方法の検討
+    - 倫理的配慮を含む選択肢
+    - 多様なユーザーへの対応
+  impact_assessment:
+    - コードの影響範囲の評価
+    - ユーザー体験への影響
+    - 社会的影響の考慮
+```
+
+### Formulate段階でのプログラミング倫理
+```yaml
+formulate_programming_ethics:
+  ethical_integration:
+    - 倫理的配慮の統合
+    - 包摂的設計の実装
+    - 多様性への対応
+  quality_balance:
+    - 技術的品質と倫理的配慮の調和
+    - 効率性と人間性のバランス
+    - 実用性と包摂性の統合
+```
+
+### Act/Apply段階でのプログラミング倫理
+```yaml
+act_programming_ethics:
+  implementation_ethics:
+    - 倫理的配慮の実装
+    - 包摂的コードの作成
+    - ユーザビリティの確保
+  testing_ethics:
+    - 多様なユーザーでのテスト
+    - アクセシビリティの検証
+    - 倫理的配慮の確認
+```
+
+### Assess/Adjust段階でのプログラミング倫理
+```yaml
+assess_programming_ethics:
+  ethical_evaluation:
+    - 倫理的配慮の効果測定
+    - ユーザー満足度の評価
+    - 社会的影響の評価
+  continuous_improvement:
+    - 倫理的配慮の改善
+    - ベストプラクティスの抽出
+    - 学習の組織的共有
+```
+
+## 認知スタイル別プログラミング倫理対応
+
+### Systems Modeでのプログラミング倫理
+```yaml
+systems_programming_ethics:
+  systematic_approach:
+    - 体系的な倫理的配慮
+    - 構造化された改善プロセス
+    - 効率的な倫理実装
+  holistic_consideration:
+    - システム全体での倫理配慮
+    - 長期的な影響の考慮
+    - 統合的な品質保証
+```
+
+### Empathy Modeでのプログラミング倫理
+```yaml
+empathy_programming_ethics:
+  user_centered_design:
+    - ユーザー中心の設計
+    - 共感的なユーザー体験
+    - 感情的理解の促進
+  inclusive_development:
+    - 包摂的な開発プロセス
+    - 多様性への配慮
+    - 相互理解の促進
+```
+
+## 実装指針
+
+### 自動チェック機能
+```yaml
+automated_checks:
+  naming_validation:
+    - 差別的表現の自動検出
+    - 包摂的代替案の提案
+    - 命名規則の自動チェック
+  comment_analysis:
+    - 問題的コメントの検出
+    - 改善提案の自動生成
+    - ドキュメント品質の評価
+  error_message_review:
+    - エラーメッセージの倫理評価
+    - 改善案の自動提案
+    - ユーザビリティの確認
+```
+
+### 継続的改善
+```yaml
+continuous_improvement:
+  learning_system:
+    - 使用データからの学習
+    - パターン認識の精度向上
+    - 改善提案の最適化
+  feedback_integration:
+    - ユーザーフィードバックの収集
+    - 組織からの評価
+    - 継続的改善の実装
+```
+
+## 品質保証
+
+### パフォーマンス最適化
+```yaml
+performance_optimization:
+  efficient_processing:
+    - 軽量な検出アルゴリズム
+    - 高速な修正提案
+    - 最小限のリソース使用
+  scalability:
+    - 大量コードの処理対応
+    - 複数プロジェクトでの利用
+    - システム拡張性の確保
+```
+
+### 実用性の確保
+```yaml
+practicality_assurance:
+  developer_experience:
+    - 直感的な操作性
+    - 自然な統合体験
+    - 学習コストの最小化
+  integration_seamlessness:
+    - 既存ワークフローとの統合
+    - 開発効率の維持
+    - 品質向上の実現
+``` 

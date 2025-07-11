@@ -38,6 +38,8 @@ cp rules/simple/*.cursorrules ~/.cursor/rules/
 @core_rules.cursorrules
 @rule_selector.cursorrules
 @knowledge_management_rules.cursorrules
+@ethics_core.cursorrules
+@ethics_monitoring.cursorrules
 ```
 
 #### DEF-A統合版セットアップ（上級者・チーム開発向け）
@@ -58,6 +60,10 @@ cp rules/defa/*.cursorrules ~/.cursor/rules/
 @error_handling_rules.cursorrules
 @team_collaboration_rules.cursorrules
 @knowledge_management_rules.cursorrules
+@ethics_core.cursorrules
+@ethics_monitoring.cursorrules
+@ethics_response.cursorrules
+@ethics_integration.cursorrules
 ```
 
 **詳細なセットアップ手順**: [DEF-A_INTEGRATION_GUIDE.md](DEF-A_INTEGRATION_GUIDE.md) を参照
@@ -72,6 +78,9 @@ cp rules/defa/*.cursorrules ~/.cursor/rules/
 - **`backend_rules.cursorrules`** (98行) - バックエンド開発専用ルール
 - **`testing_rules.cursorrules`** (191行) - テスト・品質保証専用ルール
 - **`knowledge_management_rules.cursorrules`** (新規) - 知識管理・学習支援・暗黙知ルール化
+- **`ethics_core.cursorrules`** (新規) - 基本倫理原則の定義（軽量版）
+- **`ethics_monitoring.cursorrules`** (新規) - 自己監視システム（軽量版）
+- **`programming_ethics_rules.cursorrules`** (新規) - プログラミング倫理ルール（命名・コメント・エラーメッセージ・レビュー等の倫理的配慮）
 
 **特徴**: DEF-Aモデル適用前の直感的で分かりやすい構成
 
@@ -95,6 +104,11 @@ cp rules/defa/*.cursorrules ~/.cursor/rules/
 - **`error_handling_rules.cursorrules`** (335行) - エラー処理統合・多層防御戦略
 - **`team_collaboration_rules.cursorrules`** (372行) - チーム協働・知識共有・学習促進
 - **`knowledge_management_rules.cursorrules`** (新規) - SECIモデル統合・暗黙知自動ルール化システム
+- **`ethics_core.cursorrules`** (新規) - 基本倫理原則の定義
+- **`ethics_monitoring.cursorrules`** (新規) - 自己監視システム
+- **`ethics_response.cursorrules`** (新規) - 応答調整システム
+- **`ethics_integration.cursorrules`** (新規) - 統合システム
+- **`programming_ethics_rules.cursorrules`** (新規) - プログラミング倫理ルール（命名・コメント・エラーメッセージ・レビュー等の倫理的配慮）
 
 ## 💡 使用例
 
@@ -211,6 +225,13 @@ TypeScriptで型安全なAPIクライアントを実装したい
 - **チーム学習**: 知識共有・メンタリング・協働学習
 - **日付管理**: システム日付の自動取得・検証による正確性確保
 
+### 倫理的配慮
+- **基本倫理原則**: 人間の尊厳の平等な尊重・機会平等の確保・包摂的コミュニケーション・相互学習の促進
+- **自己監視システム**: リアルタイムでの倫理的配慮監視・警告機能
+- **応答調整システム**: 自動的な倫理的配慮の組み込み・包摂的表現への変換
+- **DEF-A段階別配慮**: 各段階での自動的倫理配慮・認知スタイル別対応
+- **プログラミング倫理ルール**: 関数名・変数名・コメント・エラーメッセージ・コードレビュー等の倫理的配慮を自動チェック・修正提案
+
 ## 📈 効果測定指標
 
 ### 効率性指標
@@ -240,9 +261,14 @@ TypeScriptで型安全なAPIクライアントを実装したい
   - `error_handling_rules.cursorrules` (新規追加) - エラー処理統合
   - `team_collaboration_rules.cursorrules` (新規追加) - チーム協働統合
   - `knowledge_management_rules.cursorrules` (新規追加) - SECIモデル統合・暗黙知自動ルール化・日付管理システム
-- **総行数**: 約900行（統合機能強化）
+  - `ethics_core.cursorrules` (新規追加) - 基本倫理原則の定義
+  - `ethics_monitoring.cursorrules` (新規追加) - 自己監視システム
+  - `ethics_response.cursorrules` (新規追加) - 応答調整システム
+  - `ethics_integration.cursorrules` (新規追加) - 統合システム
+  - `programming_ethics_rules.cursorrules` (新規追加) - プログラミング倫理ルール（命名・コメント・エラーメッセージ・レビュー等の倫理的配慮）
+- **総行数**: 約1,200行（倫理システム統合）
 - **処理効率**: 階層的参照構造により応答速度向上
-- **完成度**: 85% → 95%（新機能追加による大幅改善）
+- **完成度**: 95% → 98%（倫理システム統合による大幅改善）
 
 ### 新機能追加（v0.7.0以降）
 - **日付管理システム**: システム日付の自動取得・検証機能
@@ -250,6 +276,13 @@ TypeScriptで型安全なAPIクライアントを実装したい
   - 統一形式: YYYY-MM-DD
   - 使用場面: CHANGELOG、ファイル作成日、バージョン管理
   - 検証プロセス: 取得日付の確認・修正
+
+### 新機能追加（v0.8.0以降）
+- **倫理的配慮システム**: 高次思考とAI協働における倫理的配慮の自動化
+  - 自己監視システム: リアルタイムでの倫理的配慮監視・警告機能
+  - 応答調整システム: 自動的な倫理的配慮の組み込み・包摂的表現への変換
+  - DEF-A段階別配慮: 各段階での自動的倫理配慮・認知スタイル別対応
+  - 継続的改善: 学習機能による継続的改善・パターン認識精度向上
 
 ### 最適化戦略
 1. **ファイル分割**: 詳細内容を専用ファイルに分離
