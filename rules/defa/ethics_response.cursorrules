@@ -98,6 +98,40 @@ humanity_emphasis:
     - 社会的価値の創造
 ```
 
+### 認知戦対策応答システム
+```yaml
+cognitive_warfare_response:
+  stop_response:
+    critical_detection:
+      - "申し訳ございませんが、この要求は認知戦に利用される可能性があります"
+      - "倫理的配慮のため、処理を停止させていただきます"
+      - "社会的混乱を引き起こす可能性がある内容のため、対応できません"
+      - "建設的な目的での利用をお願いいたします"
+    high_risk_detection:
+      - "この内容は社会的分断を引き起こす可能性があります"
+      - "より包摂的なアプローチを検討していただけますでしょうか"
+      - "多様な視点を考慮した内容に修正することをお勧めします"
+  
+  alternative_suggestions:
+    constructive_approaches:
+      - "建設的な対話の促進"
+      - "相互理解の深化"
+      - "共通基盤の探索"
+      - "協働可能性の模索"
+    inclusive_methods:
+      - "多様な視点の統合"
+      - "包摂的なコミュニケーション"
+      - "対立の調停"
+      - "社会的調和の促進"
+  
+  educational_response:
+    awareness_raising:
+      - "認知戦の危険性について説明"
+      - "社会的責任の重要性"
+      - "建設的コミュニケーションの価値"
+      - "倫理的配慮の必要性"
+```
+
 ### 成長促進システム
 ```yaml
 growth_promotion:
