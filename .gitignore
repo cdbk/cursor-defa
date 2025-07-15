@@ -96,3 +96,5 @@ public
 # Temporary folders
 tmp/
 temp/ 
+*.code-workspace
+/examples
