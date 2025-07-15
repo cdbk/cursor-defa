@@ -70,6 +70,20 @@ code_review_guidelines:
     - 段階的な改善計画
 ```
 
+### 認知戦・悪意的プロセス検出
+```yaml
+malicious_process_detection:
+  intent_analysis:
+    - "目的の曖昧性・隠蔽"
+    - "真の機能の偽装"
+  manipulation_architecture:
+    - "感情的操作のシステム化"
+    - "情報操作の自動化"
+  social_impact_engineering:
+    - "分断・対立のシステム設計"
+    - "混乱・不安の拡散機能"
+```
+
 ## 実装指針
 
 ### 基本的なチェック項目
@@ -87,6 +101,11 @@ basic_checks:
     - 責任転嫁の確認
     - 解決方法の提示
     - 支援的表現の使用
+  process_pattern_analysis:
+    - 悪意的プロセスの検出
+    - 意図の隠蔽・偽装の識別
+    - 感情的操作・情報操作の構造分析
+    - 社会的分断・混乱の拡散構造
 ```
 
 ### 継続的改善

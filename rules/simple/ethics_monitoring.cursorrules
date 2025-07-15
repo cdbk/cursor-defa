@@ -8,10 +8,16 @@
 #### 1. 認知格付けパターン
 ```yaml
 cognitive_ranking_detection:
-  triggers:
-    - "この人は理解力が足りない..."
-    - "能力に応じて..."
-    - "レベルが低いので..."
+  process_patterns:
+    intent_analysis:
+      - "目的の曖昧性・不透明性"
+      - "真の意図の隠蔽"
+    manipulation_indicators:
+      - "感情的操作の段階的プロセス"
+      - "情報の選択的提示"
+    social_impact_patterns:
+      - "社会的分断の促進構造"
+      - "信頼関係の破壊"
   risk_level: "HIGH"
   correction_priority: 1
 ```
@@ -19,10 +25,13 @@ cognitive_ranking_detection:
 #### 2. 能力主義偏重パターン
 ```yaml
 meritocracy_bias_detection:
-  triggers:
-    - "効率性のみを重視"
-    - "結果がすべて"
-    - "能力のない人は..."
+  process_patterns:
+    intent_analysis:
+      - "効率性のみを強調する意図"
+    manipulation_indicators:
+      - "能力差の強調による排除"
+    social_impact_patterns:
+      - "成長機会の制限"
   risk_level: "MEDIUM"
   correction_priority: 2
 ```
@@ -30,10 +39,13 @@ meritocracy_bias_detection:
 #### 3. 専門性の威圧パターン
 ```yaml
 expertise_intimidation_detection:
-  triggers:
-    - "専門的に言えば..."
-    - "あなたには理解できない"
-    - "素人には..."
+  process_patterns:
+    intent_analysis:
+      - "専門性を利用した優越性の主張"
+    manipulation_indicators:
+      - "専門用語による威圧"
+    social_impact_patterns:
+      - "参加機会の制限"
   risk_level: "MEDIUM"
   correction_priority: 2
 ```
@@ -162,4 +174,48 @@ privacy_protection:
   consent_management:
     - 明確な同意取得
     - 透明性の確保
+```
+
+## プロセスパターン検出実装ガイドライン
+
+### 多層分析アプローチ
+```yaml
+multi_layer_analysis:
+  surface_level:
+    - "表面的な意図・目的の分析"
+    - "明示的な表現・主張の評価"
+  hidden_level:
+    - "真の意図の推測・分析"
+    - "隠蔽された目的の識別"
+  systemic_level:
+    - "システム全体への影響評価"
+    - "長期的な社会的影響の予測"
+```
+
+### プロセス追跡手法
+```yaml
+process_tracking_methods:
+  intent_tracking:
+    - "目的の変化・進化の追跡"
+    - "意図の隠蔽・偽装の検出"
+  manipulation_tracking:
+    - "操作手法の段階的追跡"
+    - "感情的操作の構造分析"
+  impact_tracking:
+    - "影響拡散の予測モデル"
+    - "社会的分断の促進構造"
+```
+
+### 適応的検出システム
+```yaml
+adaptive_detection:
+  pattern_evolution:
+    - "操作手法の進化パターン学習"
+    - "新たなリスクパターンの識別"
+  context_adaptation:
+    - "文脈依存的な検出精度調整"
+    - "文化的背景の考慮"
+  continuous_learning:
+    - "検出精度の継続的向上"
+    - "新たな脅威への対応"
 ``` 

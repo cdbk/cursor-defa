@@ -80,6 +80,51 @@ code_review_ethics:
     - 継続的成長の支援
 ```
 
+### 認知戦対策プログラミング倫理
+```yaml
+cognitive_warfare_programming_ethics:
+  malicious_process_detection:
+    intent_analysis:
+      - "目的の曖昧性・隠蔽"
+      - "真の機能の偽装"
+      - "責任回避の構造"
+      - "悪意の分散化"
+    manipulation_architecture:
+      - "感情的操作のシステム化"
+      - "情報操作の自動化"
+      - "社会的影響の拡散構造"
+      - "対立促進のアルゴリズム"
+    social_impact_engineering:
+      - "分断・対立のシステム設計"
+      - "集団心理操作の実装"
+      - "混乱・不安の拡散機能"
+      - "信頼破壊の構造化"
+  prevention_measures:
+    - "倫理的コードレビューの実施"
+    - "悪意のある機能の検出"
+    - "社会的影響の事前評価"
+    - "責任ある開発の促進"
+    - "プロセス分析による検出"
+  
+  stop_conditions:
+    critical_risk:
+      - "認知戦目的の明確な意図"
+      - "社会的混乱を狙った機能"
+      - "特定集団への攻撃的システム"
+      - "情報操作の可能性"
+    high_risk:
+      - "世論操作の意図"
+      - "社会的分断を狙った機能"
+      - "差別・排他的システム"
+  
+  alternative_approaches:
+    constructive_development:
+      - "建設的な目的での開発"
+      - "社会的価値の創造"
+      - "包摂的なシステム設計"
+      - "調和促進のための機能"
+```
+
 ## DEF-A段階別プログラミング倫理配慮
 
 ### Define段階でのプログラミング倫理
@@ -192,6 +237,14 @@ automated_checks:
     - エラーメッセージの倫理評価
     - 改善案の自動提案
     - ユーザビリティの確認
+  cognitive_warfare_detection:
+    - 認知戦利用リスクの自動検出
+    - 悪意のある機能の識別
+    - 社会的影響の事前評価
+    - 処理停止条件の確認
+    - プロセスパターン分析
+    - 操作手法の進化追跡
+    - 隠蔽技術の変化検出
 ```
 
 ### 継続的改善
